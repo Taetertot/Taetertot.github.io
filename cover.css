@@ -71,6 +71,10 @@ body {
   opacity:1!important;
 }
 
-box-shadow-teal: 5px 10px 8px 10px #5bc0de
+.box-shadow-teal {
+  box-shadow: 5px 10px 8px 10px #5bc0de;
+}
 
-box-shadow-green: 5px 10px 8px 10px #5cb85c
+.box-shadow-green {
+  box-shadow: 5px 10px 8px 10px #5cb85c;
+}
