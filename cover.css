@@ -78,3 +78,8 @@ body {
 .box-shadow-green {
   box-shadow: 5px 10px 8px 10px #5cb85c;
 }
+
+.photo-img {
+  max-width: 100%;
+  height: auto;
+}
