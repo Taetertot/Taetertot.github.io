@@ -90,3 +90,6 @@ body {
 .indent { 
    text-indent: 110px;
 }
+.right-indent { 
+   text-indent: 310px;
+}
