@@ -94,6 +94,11 @@ body {
    text-indent: 510px;
 }
 
+,sidebar {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .figcaption {
     postion: absolute;
     top: 2rem;
