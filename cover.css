@@ -99,8 +99,9 @@ body {
   overflow-y: auto;
 }
 
-.figcaption {
-    postion: absolute;
-    top: 2rem;
-    margin: 0 2rem;
-}    
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
