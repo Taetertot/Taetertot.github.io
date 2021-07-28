@@ -1,6 +1,6 @@
 $(document).ready(function(){
      $(window).scroll(function () {
-            if ($(this).scrollTop() > 50) {
+            if ($(this).scrollTop() > 20) {
                 $('#back-to-top').fadeIn();
             } else {
                 $('#back-to-top').fadeOut();
@@ -11,7 +11,7 @@ $(document).ready(function(){
             $('#back-to-top').tooltip('hide');
             $('body,html').animate({
                 scrollTop: 0
-            }, 800);
+            }, 300);
             return false;
         });
         
