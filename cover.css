@@ -113,12 +113,11 @@ padding-left: 220px; /* 180 + 40 */
   margin-bottom: 10px;
 }
 
-#back-to-top {
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display:none;
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
 }
 
 /* Container holding the image and the text */
