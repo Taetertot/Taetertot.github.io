@@ -107,7 +107,8 @@ body {
 }
 
 .empty {
-  min height 60px;
+  min height 160px;
+  margin bottom 10px;
 }
 
 .back-to-top {
