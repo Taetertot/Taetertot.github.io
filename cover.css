@@ -94,7 +94,7 @@ body {
    text-indent: 510px;
 }
 
-,sidebar {
+.sidebar {
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -107,7 +107,7 @@ body {
 }
 
 .empty {
-  min height 160px;
+  min height 260px;
   margin bottom 10px;
 }
 
