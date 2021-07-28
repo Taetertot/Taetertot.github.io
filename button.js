@@ -1,3 +1,6 @@
+new WebDriverWait(firefoxDriver, pageLoadTimeout).until(
+      webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
 
