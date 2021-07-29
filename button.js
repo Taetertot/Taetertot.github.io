@@ -1,8 +1,12 @@
-new WebDriverWait(firefoxDriver, pageLoadTimeout).until(
-      webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+function loadBackToTopButton() {
+      //Get the button
+      let mybutton = document.getElementById("btn-back-to-top");
+      
+      // When the user clicks on the button, scroll to the top of the document
+      mybutton.addEventListener("click", backToTop);
+}
 
-//Get the button
-let mybutton = document.getElementById("btn-back-to-top");
+window.onload = loadBackToTopButton;
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
@@ -19,8 +23,6 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
 
 function backToTop() {
   document.body.scrollTop = 0;
