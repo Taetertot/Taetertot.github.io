@@ -19,6 +19,7 @@
 .body {
   text-shadow: 90 .05rem .1rem rgba(90, 90, 90, .5);
   box-shadow: inset 90 90 5rem rgba(90, 90, 90, .5);
+  background-color: dark gray;
 }
 
 .cover-container {
