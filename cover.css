@@ -138,3 +138,22 @@ padding-left: 220px; /* 180 + 40 */
   border: none;
   outline:none;
 }  
+
+/* Navigation Bar */
+ul.vertical a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+element.style {
+}
+ul.vertical a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+ul.vertical li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
