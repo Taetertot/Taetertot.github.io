@@ -140,6 +140,6 @@ padding-left: 220px; /* 180 + 40 */
 }  
 
 /* Navigation */
-.element:hover {
+.click:hover {
 background-color: success;
 }
