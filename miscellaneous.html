@@ -1,6 +1,5 @@
 <!doctype html>
   <html lang="en" class="h-100">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,22 +45,22 @@
     <div max-width="300px">
       <div max-width="300px" class="row">
         
-        <div class="col-xs- col-md-3">
+        <div class="col-md-3">
           <div class="container-fluid">
             
-            <div class="row-mb-6 empty">
-              <div class="col-md-2">
+            <div class="row-mb-8 empty">
+              <div class="col-md-">
             <!-- blank space -->
                 &nbsp;
               </div>  
             </div>
             
             <!-- Sidebar -->
-            <div class="px-1 rounded position-fixed" style="top: 2rem; sidebar" id="sticky-sidebar">
+              <div class="px-1 rounded position-fixed" style="top: 2rem; sidebar" id="sticky-sidebar">
               <div class="row">
                 <div class="col-md-4 p-4 w-75 bg-dark rounded">
                    <ul class = "vertical ex"><h4 class="fst-italic text-start">Navigate</h4>
-                  <ol class="link list-unstyled mb-0 link-underline link-underline-opacity-0">
+                  <ol class="list-unstyled mb-0">
                     <li><a href="index.html" class="link-light">Main Page</a></li>
                     <li><a href="research.html" class="link-light">Research</a></li>
                     <li><a href="miscellaneous.html" class="link-light">Miscellaneous</a></li>
@@ -74,7 +73,7 @@
                   <h4 class="fst-italic">Research Interests</h4>
                   <p><ul>
                      <li>Health Technology & Informatics</li>
-                     <li>Health Wearables & Tracking Applications</li>
+                     <li>Health Wearables & Tracking Applicatons</li>
                      <li>Mental Health & Comorbidities </li>
                      <li>Behavioral Change Support</li> 
                      <li>Leveraging Technology in Healthcare</li>
@@ -86,7 +85,8 @@
                 <div class="col-md-4 p-4 w-75 bg-dark rounded">
                   <h4 class="fst-italic text-start ">Let's Connect</h4>
                   <ol class="list-unstyled mb-0">
-                    <a href="mailto:taejones@cs.washington.edu"class="link-light" target="_blank">Email Me</a> | <a href="http://www.linkedin.com/in/tae-jones" class="link-light">LinkedIn</a>
+                     <a href="mailto:taejones@cs.washington.edu"class="link-light" target="_blank">Email Me</a> | 
+                    <a href="http://www.linkedin.com/in/tae-jones" class="link-light">LinkedIn</a>
                     <li><a href="documents/Tae Jones' CV-s.pdf" class="link-light">View My CV</a></li>
                     <br>
                     <!-- Google Calendar Appointment Scheduling begin -->
@@ -99,7 +99,7 @@
                         calendar.schedulingButton.load({
                           url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0nxw-f8qrIcLH3oVHLmMwtr7Dsz7um2pP8TL8I36CczVeiz94qjv4DlhAzLdKer6T4VI3dxdRV?gv=true',
                           color: '#0B8043',
-                          label: "Schedule To Meet",
+                          label: "Schedule to meet",
                           target,
                         });
                       });
@@ -112,36 +112,83 @@
             </div>
           </div>  
         </div>
-        <div class="col-xs-6 col-md-6"> <!-- Center -->
+        
+        <div class="col-md-6"> <!-- Center -->
           <br>
           <br>
           <br>
           <br>
-          <div class="row"> <!--- Intro --> <div class="row">
+               
+            <!-- Use as post template
+          <br>
+          <br>
+          <br>
+          <div class="row">
             <div class="col-md-">
-              <main class="rounded px-3 bg-dark box-shadow-green rounded text-center" >
+              <main class="rounded px-3 box-shadow-green rounded bg-dark" >
+                   <article class="blog-post">
+                     <br>
+                      <h2 class="blog-post-title text-start ">Title</h2>
+                      <p class="blog-post-meta text-start right-indent"> Mar. 14, 2022 </p>
+
+                     <p> test test test　test test test test test test test test test test test test  </p>
+                     <p> test test test　test test test test test test test test test test test test  </p>
+                     <p> test test test </p> 
+                     <ul class ="text-justify">
+                        <li>test　test test test test test test　test </li>
+                        <li>test　test test test test test test　test </li>
+                        <li>test　test test test test test test　test test　test test test test test test　test </li>
+                     </ul>
+                     <br>
+                 </article>
+               </main>
+            </div>
+          </div> -->
+          <br>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-md-">
+              <main class="rounded px-3 box-shadow-green rounded bg-dark" id="BP" >
                    <article class="blog-post">
                      <br>
                       <h2 class="blog-post-title text-center "> Miscellaneous</h2>
                        <br>
                        <img class="img-circle" src="/Images/soon sign.jpg" alt="Work In Progress">
-                       <br>
+                     <br>
                      <br>
                      <br>
                  </article>
                </main>
             </div>
-          </div>  
-          <br>
-          <br>
-          <br>
+          </div>
+
         </div>
         
-     <!--- Button -->   
-        <div class="row">  
+        <div class="col-md-3"> <!--Right side -->
+         <div class="container-fluid">
+          
+       
+            
             <div class="col-md- w-2 h-2"> <!-- Auto up button -->
-             <div class="arrow" id="btn-back-to-top" href="#" role="button" title="Retrun to top of page" data-toggle="tooltip" 
+             <div class="arrow" id="btn-back-to-top" href="#" role="button" title="Return to top of page" data-toggle="tooltip" 
                      data-placement="left"><img class="img-responsive" src="/Images/arrow-up.png" alt="To Top"></div>
-         </div>
+
+            </div>
+          </div>  
+         
+           </div>
+        </div>
+        
+      </div>
+    </div> 
+  
+        <!-- Footer -->
+        <footer class="mt-auto text-white-50">
+          <div class="w-2 h-2">
+              
+          </div> 
+        </footer>
+
     </body>
   </html>
