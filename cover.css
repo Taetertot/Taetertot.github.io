@@ -138,12 +138,3 @@ padding-left: 220px; /* 180 + 40 */
   border: none;
   outline:none;
 }  
-
-/* Navigation Bar */
-.link {
-  text-decoration: none;
-}
-
-.link:hover {
-  background-color: success;
-}
