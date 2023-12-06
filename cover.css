@@ -148,6 +148,12 @@ padding-left: 220px; /* 180 + 40 */
   color: green !important;
 }
 
+.tab:hover {
+  background-color: yellow;
+}
+
+/*
 .current-tab {
   background-color: yellow;
 }
+*/
