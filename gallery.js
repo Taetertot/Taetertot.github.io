@@ -15,7 +15,9 @@ for (var i = 1; i <= 10; i++) {
   );
 }
 
-var currentImage = document.getElementById("current-image");
+
+// Old code
+var currentImage = document.getElementById("current-image"); 
 
 let slideIndex = 1;
 showSlides(slideIndex);
