@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", loadImageThumbs);
 
 function loadImageThumbs() {
   var imageThumbs = document.getElementById("image-thumbs");
+  var currentImage = document.getElementById("current-image"); 
   
   for (var i = 1; i <= 15; i++) {
     var thumb = document.createElement("img");
@@ -22,8 +23,7 @@ function loadImageThumbs() {
 }
 
 
-// Old code
-var currentImage = document.getElementById("current-image"); 
+// Old codde
 
 let slideIndex = 1;
 showSlides(slideIndex);
