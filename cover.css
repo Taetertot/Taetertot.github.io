@@ -150,14 +150,52 @@ padding-left: 220px; /* 180 + 40 */
 
 .tab:hover {
   background-color: green !important;
-  
-}
+  }
 
 .tab-text:hover {
   color: white !important;
 }
 
 /* Picture Gallery */
+.intro { 
+  text-align: center; 
+  font-family: Arial;
+}
+
+h2 { 
+  font-size: 36px;
+}
+
+p { 
+  font-size: 14pt;
+}
+
+#image-gallery { 
+  width: 600px; 
+  margin: 0 auto;
+}
+
+#current-image { 
+  width: 100%;
+  border-radius: 10%;
+} 
+
+#image-thumbs { 
+  display: flex; 
+  justify-content: center; 
+  margin-top: 20px;
+  border-radius: 30%;
+}
+
+.thumb { 
+  width: 80px; 
+  height: 80px; 
+  object-fit: cover; 
+  margin-right: 10px; 
+  cursor: pointer;
+}
+
+
 * {
   box-sizing: border-box;
 }
