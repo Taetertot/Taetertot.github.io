@@ -1,5 +1,5 @@
-thumb.classList.add("thumb");
-imageThumbs.appendChild(thumb);
+
+
 
 var imageThumbs = document.getElementById("image-thumbs");
 
@@ -13,6 +13,9 @@ for (var i = 1; i <= 15; i++) {
       currentImage.alt = this.alt;
     }
   );
+
+  thumb.classList.add("thumb");
+  imageThumbs.appendChild(thumb);
 }
 
 
