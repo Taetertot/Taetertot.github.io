@@ -176,9 +176,8 @@ p {
 }
 
 #current-image { 
-  width: 80%;
-  hight: 80%
-  border-radius: 40%;
+  max-width: 90%;
+  border-radius: 10%;
 } 
 
 #image-thumbs { 
