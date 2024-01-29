@@ -176,7 +176,8 @@ p {
 }
 
 #current-image { 
-  width: 100%;
+  width: 70%;
+  hight: 70%
   border-radius: 10%;
 } 
 
