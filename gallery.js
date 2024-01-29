@@ -20,7 +20,7 @@ function loadImageThumbs() {
   
     thumb.classList.add("thumb");
 
-    if(currentThumbWidths + thumb.width > imageThumbs.width) {
+    if(currentThumbWidths + thumb.width > window.getComputedStyle(imageThumbs.parentNode, null).maxWidth ) {
       imageThumbs.appendChild( document.createElement("br") );  
       
       currentThumbWidths = 0;
@@ -29,6 +29,7 @@ function loadImageThumbs() {
     imageThumbs.appendChild(thumb);
     currentThumbWidths += thumb.width;
 
+    console.log("max Width of parent = " + window.getComputedStyle(imageThumbs.parentNode, null).maxWidth );
     console.log("currentThumbWidths = " + currentThumbWidths);
   }
 
