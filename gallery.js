@@ -5,7 +5,7 @@ function loadImageThumbs() {
   var imageThumbs = document.getElementById("image-thumbs");
   var currentImage = document.getElementById("current-image"); 
 
-  var currentThumbWidths = 0;
+  var currentThumbWidths = 0px;
   
   for (var i = 1; i <= 15; i++) {
     var thumb = document.createElement("img");
