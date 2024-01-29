@@ -5,7 +5,7 @@ function loadImageThumbs() {
   var imageThumbs = document.getElementById("image-thumbs");
   var currentImage = document.getElementById("current-image"); 
 
-  var currentThumbWidths = 0px;
+  var currentThumbWidths = 0;
   
   for (var i = 1; i <= 15; i++) {
     var thumb = document.createElement("img");
@@ -20,7 +20,7 @@ function loadImageThumbs() {
   
     thumb.classList.add("thumb");
 
-    if(currentThumbWidths + thumb.width > window.getComputedStyle(imageThumbs.parentNode, null).width ) {
+    if(currentThumbWidths + thumb.width > parseInt(window.getComputedStyle(imageThumbs.parentNode, null).width, 10) ) {
       imageThumbs.appendChild( document.createElement("br") );  
       
       currentThumbWidths = 0;
@@ -29,7 +29,7 @@ function loadImageThumbs() {
     imageThumbs.appendChild(thumb);
     currentThumbWidths += thumb.width;
 
-    console.log("max Width of parent = " + window.getComputedStyle(imageThumbs.parentNode, null).width );
+    console.log("max Width of parent = " + parseInt(window.getComputedStyle(imageThumbs.parentNode, null).width, 10) );
     console.log("currentThumbWidths = " + currentThumbWidths);
   }
 
