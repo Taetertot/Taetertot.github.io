@@ -28,6 +28,8 @@ function loadImageThumbs() {
     
     imageThumbs.appendChild(thumb);
     currentThumbWidths += thumb.width;
+
+    console.log("currentThumbWidths = " + currentThumbWidths);
   }
 
 }
