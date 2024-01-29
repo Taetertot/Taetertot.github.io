@@ -177,6 +177,7 @@ p {
 
 #current-image { 
   max-width: 80%;
+  height: 380px;
   border-radius: 10%;
 } 
 
