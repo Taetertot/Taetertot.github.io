@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", loadImageThumbs);
 function loadImageThumbs() {
   var imageThumbs = document.getElementById("image-thumbs");
   var currentImage = document.getElementById("current-image"); 
+
+  var currentThumbWidths = 0;
   
   for (var i = 1; i <= 15; i++) {
     var thumb = document.createElement("img");
@@ -17,7 +19,15 @@ function loadImageThumbs() {
     );
   
     thumb.classList.add("thumb");
+
+    if(currentThumbWidth + thumb.width > imageThumbs.width) {
+      imageThumbs.appendChild( document.createElement("br") );  
+      
+      currentThumbWidths = 0;
+    }
+    
     imageThumbs.appendChild(thumb);
+    currentThumbWidths += thumb.width;
   }
 
 }
