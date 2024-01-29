@@ -20,7 +20,7 @@ function loadImageThumbs() {
   
     thumb.classList.add("thumb");
 
-    if(currentThumbWidth + thumb.width > imageThumbs.width) {
+    if(currentThumbWidths + thumb.width > imageThumbs.width) {
       imageThumbs.appendChild( document.createElement("br") );  
       
       currentThumbWidths = 0;
