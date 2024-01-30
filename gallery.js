@@ -19,7 +19,7 @@ function loadImageThumbs() {
     thumb.alt = "Image " + i;
     thumb.setAttribute("data-imageid", i);
     thumb.setAttribute("data-imageName", EXIF.getTag(thumb, "Subject"));
-    console.log(EXIF.getAllTags(thumb));
+    console.log(JSON.stringify(EXIF.getAllTags(thumb), null, "\t"));
     
     thumb.addEventListener(
       "click", function() {
