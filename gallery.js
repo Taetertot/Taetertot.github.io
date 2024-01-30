@@ -29,7 +29,7 @@ function loadImageThumbs() {
     
     thumb.addEventListener(
       "click", function() {
-        setCurrentImage(this.getAttribute("data=imageid"));
+        setCurrentImage(this.getAttribute("data-imageid"));
       }
     );
   
