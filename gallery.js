@@ -23,6 +23,7 @@ function loadImageThumbs() {
       thumb.setAttribute("data-imageName", EXIF.getTag(this, "Subject"));
       console.log(JSON.stringify(EXIF.getAllTags(this), null, "\t"));
     }
+                 );
     
     thumb.addEventListener(
       "click", function() {
