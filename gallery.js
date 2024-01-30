@@ -18,7 +18,7 @@ function loadImageThumbs() {
       "click", function() {
         currentImage.src = this.src;
         currentImage.alt = this.alt;
-        currentImage.setAttribute("data-imageid", thumb.getAttribute("data-imageid"));
+        currentImage.setAttribute("data-imageid", this.getAttribute("data-imageid"));
       }
     );
   
