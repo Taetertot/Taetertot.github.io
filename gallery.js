@@ -10,6 +10,8 @@ function loadImageThumbs() {
   var currentImageName = document.getElementById("image-gallery-name");
 
   var currentThumbWidths = 0;
+
+
   
   for (var i = 1; i <= numberOfImages; i++) {
     var thumb = document.createElement("img");
@@ -17,6 +19,7 @@ function loadImageThumbs() {
     thumb.alt = "Image " + i;
     thumb.setAttribute("data-imageid", i);
     thumb.setAttribute("data-imageName", EXIF.getTag(thumb, "Subject"));
+    console.log(EXIF.getAllTags(thumb));
     
     thumb.addEventListener(
       "click", function() {
