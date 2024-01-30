@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", loadImageThumbs);
 //Change number when adding phtots
 var numberOfImages = 15;
 
+var imagesArray= [];
+
 function loadImageThumbs() {
   var imageThumbs = document.getElementById("image-thumbs");
   var currentImage = document.getElementById("current-image"); 
-  var currentImageName = document.getElementById("image-gallery-name");
+  
 
   var currentThumbWidths = 0;
 
@@ -27,11 +29,7 @@ function loadImageThumbs() {
     
     thumb.addEventListener(
       "click", function() {
-        currentImage.src = this.src;
-        currentImage.alt = this.alt;
-        currentImage.setAttribute("data-imageid", this.getAttribute("data-imageid"));
-
-        currentImageName.innerHTML = this.getAttribute("data-imageName");
+        setCurrentImage(this.getAttribute("data=imageid"));
       }
     );
   
@@ -48,7 +46,12 @@ function loadImageThumbs() {
 
     console.log("max Width of parent = " + parseInt(window.getComputedStyle(imageThumbs.parentNode, null).width, 10) );
     console.log("currentThumbWidths = " + currentThumbWidths);
+
+    imagesArray[i - 1] = thumb;
+
   }
+
+  setCurrentImage(1);
 
 }
 
@@ -66,10 +69,22 @@ function plusSlides(n) {
     currentImageID = numberOfImages;
   }
 
+  setCurrentImage(currentImageID);
+  
+}
+
+function setCurrentImage(currentImageID) {
+  var currentImage = document.getElementById("current-image"); 
+
   currentImage.src = "Images/image" + currentImageID + ".jpg";
   currentImage.alt = "Image " + currentImageID;
   currentImage.setAttribute("data-imageid", currentImageID);
+
+  var currentImageName = document.getElementById("image-gallery-name");
+
+  currentImageName.innerHTML = imagesArray[currentImageID - 1].getAttribute("data-imageName");
 }
+  
 
 // Old codde
 
