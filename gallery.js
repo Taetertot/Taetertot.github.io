@@ -41,9 +41,9 @@ function loadImageThumbs() {
 function plusSlides(n) {
   var currentImage = document.getElementById("current-image"); 
 
-  var currentImageID = currentImage.getAttribute("data-imageid");
+  var currentImageID = parseInt(currentImage.getAttribute("data-imageid"), 10);
 
-  currentImageID += n;
+  currentImageID += parseInt(n, 10);
   currentImageID--;
   currentImageID = currentImageID % numberOfImages;
   currentImageID++;
