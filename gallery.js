@@ -16,13 +16,15 @@ function loadImageThumbs() {
     thumb.src = "Images/image" + i + ".jpg";
     thumb.alt = "Image " + i;
     thumb.setAttribute("data-imageid", i);
+    thumb.setAttribute("data-imageName", EXIF.getTag(thumb, "Subject"));
+    
     thumb.addEventListener(
       "click", function() {
         currentImage.src = this.src;
         currentImage.alt = this.alt;
         currentImage.setAttribute("data-imageid", this.getAttribute("data-imageid"));
 
-        currentImageName.innerHTML = EXIF.getTag(this, "Subject");
+        currentImageName.innerHTML = this.getAttribute("data-imageName");
       }
     );
   
