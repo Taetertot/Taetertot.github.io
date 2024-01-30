@@ -20,7 +20,7 @@ function loadImageThumbs() {
     thumb.setAttribute("data-imageid", i);
 
     EXIF.getData(thumb, function() {
-      //this.setAttribute("data-imageName", EXIF.getTag(this, "Subject"));
+      this.setAttribute("data-imageName", EXIF.getTag(this, "ImageDescription"));
       console.log(JSON.stringify(EXIF.getAllTags(this), null, "\t"));
     }
                  );
