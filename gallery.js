@@ -22,6 +22,7 @@ function loadImageThumbs() {
     thumb.setAttribute("data-imageid", i);
 
     EXIF.getData(thumb, function() {
+      console.log("trying to get exif data...");
       this.setAttribute("data-imageName", EXIF.getTag(this, "ImageDescription"));
       console.log(JSON.stringify(EXIF.getAllTags(this), null, "\t"));
     }
