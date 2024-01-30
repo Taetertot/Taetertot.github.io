@@ -13,11 +13,12 @@ function loadImageThumbs() {
     var thumb = document.createElement("img");
     thumb.src = "Images/image" + i + ".jpg";
     thumb.alt = "Image " + i;
+    thumb.setAttribute("data-imageid", i);
     thumb.addEventListener(
       "click", function() {
         currentImage.src = this.src;
         currentImage.alt = this.alt;
-        currentImage.setAttribute("data-imageid", i);
+        currentImage.setAttribute("data-imageid", thumb.getAttribute("data-imageid"));
       }
     );
   
