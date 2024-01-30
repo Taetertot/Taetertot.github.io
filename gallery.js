@@ -48,6 +48,10 @@ function plusSlides(n) {
   currentImageID = currentImageID % numberOfImages;
   currentImageID++;
 
+  if(currentImageID == 0) {
+    currentImageID = numberOfImages;
+  }
+
   currentImage.src = "Images/image" + currentImageID + ".jpg";
   currentImage.alt = "Image " + currentImageID;
   currentImage.setAttribute("data-imageid", currentImageID);
