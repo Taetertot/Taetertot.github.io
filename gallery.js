@@ -7,6 +7,7 @@ var numberOfImages = 15;
 function loadImageThumbs() {
   var imageThumbs = document.getElementById("image-thumbs");
   var currentImage = document.getElementById("current-image"); 
+  var currentImageName = document.getElementById("image-gallery-name");
 
   var currentThumbWidths = 0;
   
@@ -20,6 +21,8 @@ function loadImageThumbs() {
         currentImage.src = this.src;
         currentImage.alt = this.alt;
         currentImage.setAttribute("data-imageid", this.getAttribute("data-imageid"));
+
+        currentImageName.innerHTML = EXIF.getTag(this, "Subject");
       }
     );
   
