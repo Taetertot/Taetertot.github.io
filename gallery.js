@@ -1,6 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", loadImageThumbs);
 
+//Change number when adding phtots
 var numberOfImages = 15;
 
 function loadImageThumbs() {
