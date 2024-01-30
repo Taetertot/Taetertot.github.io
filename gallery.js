@@ -1,13 +1,15 @@
 
 document.addEventListener("DOMContentLoaded", loadImageThumbs);
 
+var numberOfImages = 15;
+
 function loadImageThumbs() {
   var imageThumbs = document.getElementById("image-thumbs");
   var currentImage = document.getElementById("current-image"); 
 
   var currentThumbWidths = 0;
   
-  for (var i = 1; i <= 15; i++) {
+  for (var i = 1; i <= numberOfImages; i++) {
     var thumb = document.createElement("img");
     thumb.src = "Images/image" + i + ".jpg";
     thumb.alt = "Image " + i;
@@ -15,6 +17,7 @@ function loadImageThumbs() {
       "click", function() {
         currentImage.src = this.src;
         currentImage.alt = this.alt;
+        currentImage.setAttribute("data-imageid", i);
       }
     );
   
