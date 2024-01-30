@@ -38,10 +38,24 @@ function loadImageThumbs() {
 
 }
 
+function plusSlides(n) {
+  var currentImage = document.getElementById("current-image"); 
+
+  var currentImageID = currentImage.getAttribute("data-imageid");
+
+  currentImageID += n;
+  currentImageID--;
+  currentImageID = currentImageID % numberOfImages;
+  currentImageID++;
+
+  currentImage.src = "Images/image" + currentImageID + ".jpg";
+  currentImage.alt = "Image " + currentImageID;
+  currentImage.setAttribute("data-imageid", currentImageID);
+}
 
 // Old codde
 
-let slideIndex = 1;
+/*let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -70,4 +84,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
-}
+}*/
