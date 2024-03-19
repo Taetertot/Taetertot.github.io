@@ -13,7 +13,7 @@
     
       <!-- Bootstrap core CSS -->
       <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
+      
       <style>
         .bd-placeholder-img {
           font-size: 1.125rem;
@@ -42,58 +42,6 @@
           cursor: pointer;
         }
 
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 40%;
-            width: auto;
-            padding: 16px;
-            margin-top: -50px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            -webkit-user-select: none;
-        }
-
-        .next {
-          right: 0;
-          border-radius: 3px 0 0 3px;
-        }
-
-        .prev:hover,
-        .next:hover {
-          background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .numbertext {
-          color: #f2f2f2;
-          font-size: 12px;
-          padding: 8px 12px;
-          position: absolute;
-          top: 0;
-        }
-
-        .caption-container {
-          text-align: center;
-          background-color: #222;
-          padding: 2px 16px;
-          color: white;
-        }
-
-        .galleryrow:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-
-        .gallerycolumn {
-          float: left;
-          width: 6.25%;
-        }
-
         .demo {
           opacity: 0.6;
         }
@@ -102,6 +50,57 @@
         .demo:hover {
           opacity: 1;
         }
+
+﻿   .slideshow-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+   }
+   .image-gallery {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+   }
+   .image-container {
+      width: 100%;
+      height: 100%;
+   }
+   .image-container img {
+      width: 100%;
+      height: 100%;
+   }
+   .prev-img, .next-img {
+      cursor: pointer;
+      position: relative;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+   }
+   .next-img {
+      right: 0;
+   }
+   .prev-img:hover, .next-img:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+   }
+   .bottom-img-container {
+      text-align: center;
+      margin-top: 20px;
+   }
+   .bottom-img {
+      height: 80px; 
+      width: 80px; 
+      margin: 0 10px; 
+      cursor: pointer;
+      opacity: 0.5; 
+   }
+   .bottom-img.current-bottom-img {
+      opacity: 1; 
+   }
       </style>
 
       <!-- Java-->
@@ -212,34 +211,124 @@
             <div class="col-md-">
               <main class="rounded px-3 bg-dark box-shadow-green rounded text-center" >
                   <article class="blog-post">
-                    <br>
-                    <br>
-                  <!-- Container for the image gallery -->
-                   <div id="image-gallery">
-                     <!-- Image text
+﻿                    <br>
+					
+
+   <div class="slideshow-container">
+         <a class="prev-img" onclick="slides(-1)">❮</a>
+      <a class="next-img" onclick="slides(1)">❯</a>
+	  <br><br>
+
+      <div class="image-gallery">
+         <div class="image-container">
+            <img src="Images/image1.jpg" alt="Image 1">
+         </div>
+         <div class="image-container">
+            <img src="Images/image2.jpg" alt="Image 2">
+         </div>
+         <div class="image-container">
+            <img src="Images/image3.jpg" alt="Image 3">
+         </div>
+         <div class="image-container">
+            <img src="Images/image4.jpg" alt="Image 4">
+         </div>
+		 <div class="image-container">
+            <img src="Images/image5.jpg" alt="Image 5">
+         </div>
+		 <div class="image-container">
+            <img src="Images/image6.jpg" alt="Image 6">
+         </div>
+		 <div class="image-container">
+            <img src="Images/image7.jpg" alt="Image 7">
+         </div>
+		 <div class="image-container">
+            <img src="Images/image8.jpg" alt="Image 8">
+         </div>
+		 <div class="image-container">
+            <img src="Images/image9.jpg" alt="Image 9">
+         </div>
+		 <!-- <div class="image-container"> -->
+            <!-- <img src="Images/image10.jpg" alt="Image 10"> -->
+         <!-- </div> -->
+		 <div class="image-container">
+            <img src="Images/image11.jpg" alt="Image 11">
+         </div>
+		 <div class="image-container">
+            <img src="Images/image12.jpg" alt="Image 12">
+         </div>
+		 <div class="image-container">
+            <img src="Images/image13.jpg" alt="Image 13">
+         </div>
+		 <div class="image-container">
+            <img src="Images/image14.jpg" alt="Image 14">
+         </div>
+		 <div class="image-container">
+            <img src="Images/image15.jpg" alt="Image 15">
+         </div>
+         
+      </div>
+
+   </div>
+   
+   <div class="bottom-img-container">
+
+      <img class="bottom-img current-bottom-img" src="Images/image1.jpg" onclick="activeSlides(1)">
+	  <img class="bottom-img current-bottom-img" src="Images/image2.jpg" onclick="activeSlides(2)">
+	  <img class="bottom-img current-bottom-img" src="Images/image3.jpg" onclick="activeSlides(3)">
+	  <img class="bottom-img current-bottom-img" src="Images/image4.jpg" onclick="activeSlides(4)">
+	  <img class="bottom-img current-bottom-img" src="Images/image5.jpg" onclick="activeSlides(5)">
+	  <img class="bottom-img current-bottom-img" src="Images/image6.jpg" onclick="activeSlides(6)">
+	  <img class="bottom-img current-bottom-img" src="Images/image7.jpg" onclick="activeSlides(7)">
+	  <img class="bottom-img current-bottom-img" src="Images/image8.jpg" onclick="activeSlides(8)">
+	  <img class="bottom-img current-bottom-img" src="Images/image9.jpg" onclick="activeSlides(9)">
+	  <!-- <img class="bottom-img current-bottom-img" src="Images/image10.jpg" onclick="activeSlides(10)"> -->
+	  <img class="bottom-img current-bottom-img" src="Images/image11.jpg" onclick="activeSlides(11)">
+	  <img class="bottom-img current-bottom-img" src="Images/image12.jpg" onclick="activeSlides(12)">
+	  <img class="bottom-img current-bottom-img" src="Images/image13.jpg" onclick="activeSlides(13)">
+	  <img class="bottom-img current-bottom-img" src="Images/image14.jpg" onclick="activeSlides(14)">
+	  <img class="bottom-img current-bottom-img" src="Images/image15.jpg" onclick="activeSlides(15)">
+   </div>
+                    
+   <!-- commenting out script begin
+    <script>
+      var index = 1;
+      displaySlides(index);
+
+      function slides(n) {
+         displaySlides(index += n);
+      }
+
+      function activeSlides(n) {
+         displaySlides(index = n);
+      }
+
+      function displaySlides(n) {
+         var i;
+         var allSlides = document.getElementsByClassName("image-container");
+         var allThumbnails = document.getElementsByClassName("bottom-img");
+
+         if (n > allSlides.length) {
+            index = 1;
+         }
+         if (n < 1) {
+            index = allSlides.length;
+         }
+         for (i = 0; i < allSlides.length; i++) {
+            allSlides[i].style.display = "none";
+         }
+         for (i = 0; i < allThumbnails.length; i++) {
+            allThumbnails[i].className = allThumbnails[i].className.replace(" current-bottom-img", "");
+            allThumbnails[i].style.filter = "brightness(50%)";
+         }
+         allSlides[index - 1].style.display = "block";
+         allThumbnails[index - 1].className += " current-bottom-img";
+         allThumbnails[index - 1].style.filter = "brightness(100%)";
+      }
+   </script>
+   commenting out script end-->
+                    
                      <br>
                      <br>
-                     <div class="caption-container">
-                        <p id="caption"></p>
-                      </div>  
-                     <br>
-                     <br> -->
-                     <div id="image-gallery-name"> </div>
-                       <img id="current-image" src="Images/image1.jpg" alt="Image 1" data-imageid="1">
-                      <div class = "container">
-                       <div class="col-md-">
-                         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                         <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                         <div id="image-thumbs">
-                       </div>
-                       </div>
-                     </div>
-                    </div>   
-                
-                    <br>
-                    <br>
-                    <br>
-                 </article>
                </main>
             </div>
           </div>  
