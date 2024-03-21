@@ -30,6 +30,73 @@
             font-size: 3.5rem;
           }
         }
+
+﻿ .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #32323299;
+  background-color: #0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  display: none;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #0B8043;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  position: fixed;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #212529;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  border-radius: 5px;
+}
+
+.openbtn:hover {
+  background-color: #0B8043;
+}
+
+#main {
+  transition: margin-left 1.0s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+} 
+
+
       </style>
 
       <!-- Java-->
@@ -40,7 +107,89 @@
     </head>
     
     <body max-width="300px" class="d-flex h-100 text-white post">
-    
+      
+      ﻿<div id="mySidebar" class="sidebar">
+      	<a href="javascript:void(0)" class="closebtn" onclick="openCloseNav()"></a>
+        
+      	<div class="container-fluid">
+      		<div class="row">
+      			<div class="col-md-4 p-4 w-75 bg-dark rounded">
+      				<h5 class="fst-italic">Navigate</h5>
+      				<a href="https://taetertot.github.io/index.html"class="link-light" style="display: inline"><u>Main Page</u></a><br>
+      				<a href="https://taetertot.github.io/research.html"class="link-light" style="display: inline"><u>Research</u></a><br>
+      				<a href="https://taetertot.github.io/miscellaneous.html"class="link-light" style="display: inline"><u>Miscellaneous</u></a><br>
+      			</div> 
+      		</div>
+      		<br>
+      		<div class="row">
+      			<div class="col-md-4 p-4 w-75 bg-dark rounded">
+      			  <h5 class="fst-italic">Research Interests</h5>
+      			  <ul>
+      				 <li>Health Technology &amp; Informatics</li>
+      				 <li>Health Wearables &amp; Tracking Applications</li>
+      				 <li>Mental Health &amp; Comorbidities </li>
+      				 <li>Behavioral Change Support</li> 
+      				 <li>Leveraging Technology in Healthcare</li>
+      			  </ul><p></p>
+      			</div> 
+      		</div>
+      		<br>
+      		<div class="row">
+      			<div class="col-md-4 p-4 w-75 bg-dark rounded">
+      				<h5 class="fst-italic" style="display: inline">Let's Connect</h5>
+      				<ol class="list-unstyled mb-0">
+      					<a href="mailto:taejones@cs.washington.edu" class="link-light" target="_blank" style="display: inline"><u>Email Me</u></a><br>
+      					<a href="http://www.linkedin.com/in/tae-jones" class="link-light" style="display: inline"><u>LinkedIn</u></a><br>
+      					<a href="https://taetertot.github.io/documents/Tae%20Jones'%20CV-s.pdf" class="link-light" style="display: inline"><u>View CV</u></a>
+      					<div style="line-height:50%;"><br></div> <!-- make a smaller gap between button and previous lines-->
+      
+      					<!-- Google Calendar Appointment Scheduling begin -->
+      					<link href="Tae%20Jones%20Research_files/rs=ABFko39_glKT4g78e4fndMjK_m4L31PRaw.css" rel="stylesheet">
+      					<script src="Tae%20Jones%20Research_files/m=script" async=""></script>
+      					<script>
+      					(function() {
+      					  var target = document.currentScript;
+      					  window.addEventListener('load', function() {
+      						calendar.schedulingButton.load({
+      						  url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0nxw-f8qrIcLH3oVHLmMwtr7Dsz7um2pP8TL8I36CczVeiz94qjv4DlhAzLdKer6T4VI3dxdRV?gv=true',
+      						  color: '#0B8043',
+      						  label: "Schedule To Meet",
+      						  target,
+      						});
+      					  });
+      					})();
+      					</script>
+      					<!-- <button style="color: rgb(255, 255, 255); background-color: rgb(11, 128, 67);" class="qxCTlb">Schedule To Meet</button> -->
+      					<!-- end Google Calendar Appointment Scheduling -->
+      				</ol>
+      			</div> 
+      		</div>
+      	</div>
+      </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openCloseNav()" style="left:0">☰ Toggle Sidebar</button> 
+      </div>
+      
+      <script>
+      	function openCloseNav() {
+      	  var mySideBar = document.getElementById("mySidebar");
+      	  var main = document.getElementById("main");
+      	  if (mySideBar.style.display === "block") {
+      		mySideBar.style.display = "none";
+      		mySideBar.style.width = "0";
+      		main.style.marginLeft = "0";
+      	  } else {
+      		mySideBar.style.display = "block";
+      		mySideBar.style.width = "350px";
+      		main.style.marginLeft = "250px";
+      	  }
+      	}
+      
+      	openCloseNav();
+      </script>
+
+      
  <!-- class="container-fluid" -->
     <div max-width="300px">
       <div max-width="300px" class="row">
@@ -55,62 +204,6 @@
               </div>  
             </div>
             
-            <!-- Sidebar -->
-              <div class="px-1 rounded position-fixed" style="top: 2rem; sidebar" id="sticky-sidebar">
-              <div class="row">
-                <div class="col-md-4 p-4 w-75 bg-dark rounded">
-                   <ul class = "vertical ex"><h4 class="fst-italic text-start">Navigate</h4>
-                  <ol class="list-unstyled mb-0">
-                    <li class="tab"><a href="index.html" class="link-light tab-text">Main Page</a></li>
-                    <li class="tab"><a href="research.html" class="link-light tab-text">Research</a></li>
-                    <li class="tab"><a href="miscellaneous.html" class="link-light tab-text">Miscellaneous</a></li>
-                  </ol></ul></ol>
-                   </div> 
-              </div>
-              <br>
-              <div class="row">
-                <div class="col-md-4 p-4 w-75 bg-dark rounded">
-                  <h4 class="fst-italic">Research Interests</h4>
-                  <p><ul>
-                     <li>Health Technology & Informatics</li>
-                     <li>Health Wearables & Tracking Applicatons</li>
-                     <li>Mental Health & Comorbidities </li>
-                     <li>Behavioral Change Support</li> 
-                     <li>Leveraging Technology in Healthcare</li>
-                  </ul></p>
-                </div> 
-              </div>
-              <br>
-              <div class="row">
-                <div class="col-md-4 p-4 w-75 bg-dark rounded">
-                  <h4 class="fst-italic text-start ">Let's Connect</h4>
-                  <ol class="list-unstyled mb-0">
-                     <a href="mailto:taejones@cs.washington.edu"class="link-light" target="_blank">Email Me</a> | 
-                    <a href="http://www.linkedin.com/in/tae-jones" class="link-light">LinkedIn</a> | 
-                      <a href="documents/Tae Jones' CV-s.pdf" class="hover-effect link-light">View CV</a>
-                    <br>
-                    <br>
-                    <!-- Google Calendar Appointment Scheduling begin -->
-                    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-                    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-                    <script>
-                    (function() {
-                      var target = document.currentScript;
-                      window.addEventListener('load', function() {
-                        calendar.schedulingButton.load({
-                          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0nxw-f8qrIcLH3oVHLmMwtr7Dsz7um2pP8TL8I36CczVeiz94qjv4DlhAzLdKer6T4VI3dxdRV?gv=true',
-                          color: '#0B8043',
-                          label: "Schedule to meet",
-                          target,
-                        });
-                      });
-                    })();
-                    </script>
-                    <!-- end Google Calendar Appointment Scheduling -->
-                  </ol>
-                </div> 
-              </div>
-            </div>
           </div>  
         </div>
         
