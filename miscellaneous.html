@@ -230,7 +230,9 @@
 		function openCloseNav() {
 		  var mySideBar = document.getElementById("mySidebar");
 		  var main = document.getElementById("main");
-		  
+		  var myCloseMenu = document.getElementById("closeMenu");
+		  var myOpenMenu = document.getElementById("openMenu");
+			
 		  <!-- sidebar position, padding-top, and other properties should already be set but this is just in case the style gets removed for some reason which is an issue that has come up -->
 		  mySideBar.style.height = "100%";
 		  mySideBar.style.width = "0";
@@ -247,29 +249,33 @@
 			mySideBar.style.display = "none";
 			mySideBar.style.width = "0";
 			main.style.marginLeft = "0";
+			myCloseMenu.style.display = "none";
+			myOpenMenu.style.display = "block";
 		  } else {
 			mySideBar.style.display = "block";
 			mySideBar.style.width = "350px";
 			main.style.marginLeft = "300px";
+			myCloseMenu.style.display = "block";
+			myOpenMenu.style.display = "none";
 		  }
 		}
 		openCloseNav();
 	
 	</script>
 	<div id="main">
-	  <button class="openbtn" onclick="openCloseNav()" style="left:0">☰ Toggle Sidebar</button>
+	  <button class="openbtn" onclick="openCloseNav()" id="closeMenu" style="left:0">☰ &lt;&lt;&lt; </button>
+	  <button class="openbtn" onclick="openCloseNav()" id="openMenu" style="left:0">☰ &gt;&gt;&gt; </button>
 	</div>
 	    
  <div class="container">
-    <!-- <div max-width="300px"> -->
-      <div class="row">
+        <div class="row">
         
-        <div class="col-xs- col-md-3">
+       <!-- <div class="col-xs- col-md-3">
           <div class="container-fluid">
             
      
           </div>  
-        </div>
+        </div> -->
         
         <div class="col-xs-6 col-md-6"> <!-- Center -->
           <br>
@@ -351,7 +357,7 @@
          </div>
          
       </div>
-	   <br><br>
+	   <br>
   	<a class="prev-img" style="text-decoration:none" onclick="slides(-1)">❮</a>
       	<a class="next-img" style="text-decoration:none" onclick="slides(1)">❯</a>
    </div>
