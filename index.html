@@ -89,7 +89,15 @@
   transition: margin-left 1.0s;
   padding: 16px;
 }
+	      
+.no_scroll::-webkit-scrollbar {
+  display: none;
+}
 
+.no_scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
@@ -106,8 +114,7 @@
     </head>
     
     <body max-width="300px" class="d-flex h-100 text-white post">
-	overflow-y: hidden; /* Hide vertical scrollbar */
-	overflow-x: hidden; /* Hide horizontal scrollbar */
+	
 ﻿	﻿<div id="mySidebar" class="sidebar">
 				
 		<div class="container-fluid">
