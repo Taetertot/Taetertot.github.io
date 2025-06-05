@@ -1,480 +1,173 @@
-<!doctype html>
-  <html lang="en" class="h-100">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-      <meta name="generator" content="Hugo 0.83.1">
-      <title>Tae Jones Research</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Miscellaneous - Tae Jones</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
 
-    
-      <!-- Bootstrap core CSS -->
-      <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-      
-      <style>
-        .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
-        }
-        ul.a {
-          list-style-type: circle;
-        }
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
-        .hover-effect:hover {
-            text: success;
-        }
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #48bb78 50%, #764ba2 100%);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
 
-        .mySlides {
-          display: none;
-        }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
 
-        .cursor {
-          cursor: pointer;
-        }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
 
-        .demo {
-          opacity: 0.6;
-        }
+    .section {
+      background: white;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
 
-        .active,
-        .demo:hover {
-          opacity: 1;
-        }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #667eea 0%, #48bb78 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-﻿   .slideshow-container {
+    .music-player {
+      text-align: center;
+    }
+
+    .carousel {
       position: relative;
-      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
       overflow: hidden;
-   }
-   .image-gallery {
+      border-radius: 10px;
+    }
+
+    .slides {
       display: flex;
       transition: transform 0.5s ease-in-out;
-   }
-   .image-container {
+    }
+
+    .slides img {
       width: 100%;
-      height: 100%;
-   }
-   .image-container img {
-      width: 70%;
-      height: 70%;
-      border-radius: 10%
-   }
-   .prev-img, .next-img {
-      cursor: pointer;
-      position: relative;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-   }
-   .next-img {
-      right: 0;
-   }
-   .prev-img:hover, .next-img:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-   }
-   .bottom-img-container {
+      border-radius: 10px;
+    }
+
+    .nav-buttons {
       text-align: center;
-      margin-top: 20px;
-      border-spacing: 5px;
-   }
-   .bottom-img {
-      height: 80px; 
-      width: 80px; 
-      margin: 0 10px; 
-      border-radius: 50%;
+      margin-top: 1rem;
+    }
+
+    .nav-buttons button {
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border: none;
+      background: #667eea;
+      color: white;
+      border-radius: 5px;
       cursor: pointer;
-      opacity: 0.5; 
-      padding: 5px;
-   }
-   .bottom-img.current-bottom-img {
-      opacity: 1; 
-   }
+      transition: background 0.3s ease;
+    }
 
- .sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #0;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 65px;
-  display: none;
-}
+    .nav-buttons button:hover {
+      background: #5a67d8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Miscellaneous</h1>
+  </header>
 
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+  <div class="container">
+    <section class="section music-player">
+      <h2>Listen</h2>
+      <audio controls>
+        <source src="your-audio-file.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
 
-.sidebar a:hover {
-  color: #0B8043;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.openbtn {
-  position: fixed;
-  <!-- font-size: 20px; -->
-  cursor: pointer;
-  background-color: #212529;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  z-index: 1;
-  <!-- right: 0; -->
-  top: 0;
-  border-radius: 5px;
-}
-
-.openbtn:hover {
-  background-color: #0B8043;
-}
-
-#main {
-  transition: margin-left 1.0s;
-  padding: 16px;
-}
-	      
-.no_scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.no_scroll {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-
-	      
-	      
-      </style>
-
-      <!-- Java-->
-      <script src="button.js"></script>
-      <script src="gallery.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
-      <script src="menu.js"></script>
-      
-      <!-- Custom styles for this template -->
-      <link href="cover.css" rel="stylesheet">
-    </head>
-    
-    <body class="d-flex h-100 text-white post">
-	
-	﻿<div id="mySidebar" class="sidebar">
-		
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-4 p-4 w-75 bg-dark rounded">
-					<h5 class="fst-italic">Navigate</h5>
-					<a href="https://taetertot.github.io/index.html"class="link-light" style="display: inline; text-decoration:none">Main Page</a><br>
-					<a href="https://taetertot.github.io/research.html"class="link-light" style="display: inline; text-decoration:none">Research</a><br>
-					<a href="https://taetertot.github.io/miscellaneous.html"class="link-light" style="display: inline; text-decoration:none">Miscellaneous</a><br>
-				</div> 
-			</div>
-			<br>
-			<div class="row">
-				<div class="col-md-4 p-4 w-75 bg-dark rounded">
-					<h5 class="fst-italic" style="display: inline">Let's Connect</h5>
-					<ol class="list-unstyled mb-0">
-						<a href="mailto:taejones@cs.washington.edu" class="link-light" target="_blank" style="display: inline"><u>Email Me</u></a><br>
-						<a href="http://www.linkedin.com/in/tae-jones" class="link-light" style="display: inline"><u>LinkedIn</u></a><br>
-						<a href="Documents/Tae_Jones'_CV.pdf" class="link-light" style="display: inline"><u>View CV</u></a>
-												
-						<div style="line-height:50%;"><br></div> <!-- make a smaller gap between button and previous lines-->
-					
-						     <!-- Google Calendar Appointment Scheduling begin -->
-						    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-						    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-						    <script>
-						    (function() {
-						      var target = document.currentScript;
-						      window.addEventListener('load', function() {
-							calendar.schedulingButton.load({
-							  url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0nxw-f8qrIcLH3oVHLmMwtr7Dsz7um2pP8TL8I36CczVeiz94qjv4DlhAzLdKer6T4VI3dxdRV?gv=true',
-							  color: '#0B8043',
-							  label: "Schedule to meet",
-							  target,
-							});
-						      });
-						    })();
-						    </script>
-						    <!-- end Google Calendar Appointment Scheduling -->
-					</ol>
-				</div> 
-			</div>
-		</div>
+    <section class="section">
+      <h2>Photo Carousel</h2>
+      <div class="carousel" id="carousel">
+        <div class="slides" id="slides">
+	  <img src="Images/image1.jpg" alt="Slide 1" />
+          <img src="Images/image2.jpg" alt="Slide 2" />
+          <img src="Images/image3.jpg" alt="Slide 3" />
+	  <img src="Images/image4.jpg" alt="Slide 4" />
+          <img src="Images/image5.jpg" alt="Slide 5" />
+          <img src="Images/image6.jpg" alt="Slide 6" />
+          <img src="Images/image7.jpg" alt="Slide 7" />
+          <img src="Images/image8.jpg" alt="Slide 8" />
+          <img src="Images/image9.jpg" alt="Slide 9" />
+	  <img src="Images/image10.jpg" alt="Slide 10" />
+          <img src="Images/image11.jpg" alt="Slide 11" />
+	  <img src="Images/image12.jpg" alt="Slide 12" />
+          <img src="Images/image13.jpg" alt="Slide 13" />
+	  <img src="Images/image14.jpg" alt="Slide 14" />
+          <img src="Images/image15.jpg" alt="Slide 15" />
+          <img src="Images/image16.jpg" alt="Slide 16" />
+	  <img src="Images/image17.jpg" alt="Slide 17" />
+          <img src="Images/image18.jpg" alt="Slide 18" />
+          <img src="Images/image19.jpg" alt="Slide 19" />
+          <img src="Images/image20.jpg" alt="Slide 20" />
+	  <img src="Images/image21.jpg" alt="Slide 21" />
+          <img src="Images/image22.jpg" alt="Slide 22" />
+          <img src="Images/image23.jpg" alt="Slide 23" />
+	  <img src="Images/image24.jpg" alt="Slide 24" />
+          <img src="Images/image25.jpg" alt="Slide 25" />
+        <!-- <img src="Images/image#.jpg" alt="Slide #" /> -->
 	</div>
-	
-	<div id="main">
-	  <button class="openbtn" onclick="openCloseNav()" id="closeMenu" style="left:0">☰ &lt;&lt;&lt; </button>
-	  <button class="openbtn" onclick="openCloseNav()" id="openMenu" style="left:0">☰ &gt;&gt;&gt; </button>
-	</div>
-	    
- <div class="container">
-        <div class="row">
-              
-        <div class="col-xs-6 col-md-6"> <!-- Center -->
-          <br>
-          <br>
-          <br>
-                       
-         <div class="row">
-              <div class="col-md-">
-                <main class="rounded px-3 box-shadow-green bg-dark rounded" >
-                     <article class="blog-post" style="overflow: hidden">
-                       <br>
-                       <br>
-                       <br>
-                       <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-                       <div class="elfsight-app-a004cba5-a6a8-4342-aef2-bfcdf1c1c598" data-elfsight-app-lazy></div>
-                       <br>
-                   </article>
-                 </main>
-              </div>
-            </div>  
-            <br>
-            <br>
-            <br>
-  
-          <div class="row">
-            <div class="col-md-">
-              <main class="rounded px-3 bg-dark box-shadow-green rounded text-center" >
-                  <article class="blog-post">
-﻿                    <br>
-					
-
-		   <div class="slideshow-container">
-		       
-		      <div class="image-gallery">
-		         <div class="image-container">
-		            <img src="Images/image1.jpg" alt="Image 1">
-		         </div>
-		         <div class="image-container">
-		            <img src="Images/image2.jpg" alt="Image 2">
-		         </div>
-		         <div class="image-container">
-		            <img src="Images/image3.jpg" alt="Image 3">
-		         </div>
-		         <div class="image-container">
-		            <img src="Images/image4.jpg" alt="Image 4">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image5.jpg" alt="Image 5">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image6.jpg" alt="Image 6">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image7.jpg" alt="Image 7">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image8.jpg" alt="Image 8">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image9.jpg" alt="Image 9">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image10.jpg" alt="Image 10">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image11.jpg" alt="Image 11">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image12.jpg" alt="Image 12">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image13.jpg" alt="Image 13">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image14.jpg" alt="Image 14">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image15.jpg" alt="Image 15">
-		         </div>
-		          <div class="image-container">
-		            <img src="Images/image16.jpg" alt="Image 16">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image17.jpg" alt="Image 17">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image18.jpg" alt="Image 18">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image19.jpg" alt="Image 19">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image20.jpg" alt="Image 20">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image21.jpg" alt="Image 21">
-		         </div>
-			  <div class="image-container">
-		            <img src="Images/image22.jpg" alt="Image 22">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image23.jpg" alt="Image 23">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image24.jpg" alt="Image 24">
-		         </div>  
-			  <div class="image-container">
-		            <img src="Images/image25.jpg" alt="Image 25">
-		         </div>
-			<!-- <div class="image-container">
-		            <img src="Images/image26.jpg" alt="Image 26">
-		         </div>
-			 <div class="image-container">
-		            <img src="Images/image27.jpg" alt="Image 27">
-		         </div>  -->
-		      </div>
-			   <br>
-		  	<a class="prev-img" style="text-decoration:none" onclick="slides(-1)">❮</a>
-		      	<a class="next-img" style="text-decoration:none" onclick="slides(1)">❯</a>
-			   <br>
-		   </div>
-		   
-	   <div class="bottom-img-container" style="padding:30px">
-	
-	      <img class="bottom-img current-bottom-img" src="Images/image1.jpg" onclick="activeSlides(1)">
-		  <img class="bottom-img current-bottom-img" src="Images/image2.jpg" onclick="activeSlides(2)">
-		  <img class="bottom-img current-bottom-img" src="Images/image3.jpg" onclick="activeSlides(3)">
-		  <img class="bottom-img current-bottom-img" src="Images/image4.jpg" onclick="activeSlides(4)">
-		  <img class="bottom-img current-bottom-img" src="Images/image5.jpg" onclick="activeSlides(5)">
-		  <img class="bottom-img current-bottom-img" src="Images/image6.jpg" onclick="activeSlides(6)">
-		  <img class="bottom-img current-bottom-img" src="Images/image7.jpg" onclick="activeSlides(7)">
-		  <img class="bottom-img current-bottom-img" src="Images/image8.jpg" onclick="activeSlides(8)">
-		  <img class="bottom-img current-bottom-img" src="Images/image9.jpg" onclick="activeSlides(9)">
-		  <img class="bottom-img current-bottom-img" src="Images/image10.jpg" onclick="activeSlides(10)">
-		  <img class="bottom-img current-bottom-img" src="Images/image11.jpg" onclick="activeSlides(11)">
-		  <img class="bottom-img current-bottom-img" src="Images/image12.jpg" onclick="activeSlides(12)">
-		  <img class="bottom-img current-bottom-img" src="Images/image13.jpg" onclick="activeSlides(13)">
-		  <img class="bottom-img current-bottom-img" src="Images/image14.jpg" onclick="activeSlides(14)">
-		  <img class="bottom-img current-bottom-img" src="Images/image15.jpg" onclick="activeSlides(15)">
-		  <img class="bottom-img current-bottom-img" src="Images/image16.jpg" onclick="activeSlides(16)">
-		  <img class="bottom-img current-bottom-img" src="Images/image17.jpg" onclick="activeSlides(17)">
-		  <img class="bottom-img current-bottom-img" src="Images/image18.jpg" onclick="activeSlides(18)">
-		  <img class="bottom-img current-bottom-img" src="Images/image19.jpg" onclick="activeSlides(19)">
-		  <img class="bottom-img current-bottom-img" src="Images/image20.jpg" onclick="activeSlides(20)">
-		  <img class="bottom-img current-bottom-img" src="Images/image21.jpg" onclick="activeSlides(21)">
-		  <img class="bottom-img current-bottom-img" src="Images/image22.jpg" onclick="activeSlides(22)">
-		  <img class="bottom-img current-bottom-img" src="Images/image23.jpg" onclick="activeSlides(23)">
-		  <img class="bottom-img current-bottom-img" src="Images/image24.jpg" onclick="activeSlides(24)">
-		  <img class="bottom-img current-bottom-img" src="Images/image25.jpg" onclick="activeSlides(25)">
-		<!--  <img class="bottom-img current-bottom-img" src="Images/image26.jpg" onclick="activeSlides(26)">
-		  <img class="bottom-img current-bottom-img" src="Images/image27.jpg" onclick="activeSlides(27)"> -->
-		   
-	   </div>
-                    
-	    <script>
-	      var index = 1;
-	      displaySlides(index);
-	
-	      function slides(n) {
-	         displaySlides(index += n);
-	      }
-	
-	      function activeSlides(n) {
-	         displaySlides(index = n);
-	      }
-	
-	      function displaySlides(n) {
-	         var i;
-	         var allSlides = document.getElementsByClassName("image-container");
-	         var allThumbnails = document.getElementsByClassName("bottom-img");
-	
-	         if (n > allSlides.length) {
-	            index = 1;
-	         }
-	         if (n < 1) {
-	            index = allSlides.length;
-	         }
-	         for (i = 0; i < allSlides.length; i++) {
-	            allSlides[i].style.display = "none";
-	         }
-	         for (i = 0; i < allThumbnails.length; i++) {
-	            allThumbnails[i].className = allThumbnails[i].className.replace(" current-bottom-img", "");
-	            allThumbnails[i].style.filter = "brightness(50%)";
-	         }
-	         allSlides[index - 1].style.display = "block";
-	         allThumbnails[index - 1].className += " current-bottom-img";
-	         allThumbnails[index - 1].style.filter = "brightness(100%)";
-	      }
-	   </script>
-
-                    
-                     <br>
-                     <br>
-               </main>
-            </div>
-          </div>  
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="col-xs-3 col-md-3"> <!--Right side -->
-         <div class="container-fluid">
-       <!--      <div class="row">
-                  
-                <div class="col-md- hold"> My photo 
-                 <img src="/Images/Tae_Professional.jpeg" alt="Me!" class="rounded-circle opacity-2 photo-img">  <div class="top-right"><h1>Tae Jones</h1></div>
-                  </div> 
-                  
-            </div> -->
-             <div class="row">
-                <div class="col-md- w-2 h-2"> <!-- Auto up button -->
-                 <div class="arrow" id="btn-back-to-top" href="#" role="button" title="Return to top of page" data-toggle="tooltip" 
-                     data-placement="left"><img class="img-responsive" src="/Images/up-arrow.png" alt="To Top"></div>
-
-                 </div>
-             </div>  
-         
-           </div>
-        </div>
-        
       </div>
-   <!-- </div>   -->
-  
-        <!-- Footer -->
-        <footer class="mt-auto text-white-50">
-          <div class="w-2 h-2">
-              
-          </div> 
-        </footer>
+      <div class="nav-buttons">
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+      </div>
+    </section>
+  </div>
 
-    </body>
-  </html>
+  <script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function showSlide(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      currentSlide = index;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+    }
+  </script>
+</body>
+</html>
+
+	
