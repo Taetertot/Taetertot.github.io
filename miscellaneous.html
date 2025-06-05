@@ -62,10 +62,10 @@
       gap: 1rem;
     }
    .gallery-grid img {
-      width: 100%;
-      height: 150px;
+      width: 75px;
+      height: 75px;
       object-fit: cover;
-      border-radius: 8px;
+      border-radius: 70%;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
@@ -75,7 +75,7 @@
     }
     .carousel {
       position: relative;
-      max-width: 600px;
+      max-width: 300px;
       margin: 2rem auto;
       overflow: hidden;
       border-radius: 10px;
@@ -110,6 +110,21 @@
     .nav-buttons button:hover {
       background: #5a67d8;
     }
+   .music-controls {
+      margin-top: 1rem;
+    }
+   .music-controls button {
+     padding: 0.5rem 1rem;
+     margin: 0 0.25rem;
+     border: none;
+     background: #48bb78;
+     color: white;
+     border-radius: 5px;
+     cursor: pointer;
+   }
+    .music-controls button:hover {
+     background: #38a169;
+    }
   </style>
 </head>
 <body>
@@ -120,9 +135,17 @@
   <div class="container">
     <section class="section music-player">
       <h2>Tunes</h2>
-      <audio controls>
-        <source src="website_music/Ikson - Siesta.wav" type="audio/mpeg" />
+      <audio id="audio-player" controls>
+  	<source src="website_music/Ikson - Siesta.wav" type="audio/mpeg" />
+	      <source src="website_music/Ikson - Siesta.wav" type="audio/mpeg" />
       </audio>
+      <div class="music-controls">
+        <button onclick="prevTrack()">⏮ Back</button>
+        <button onclick="togglePlayPause()">⏯ Pause</button>
+        <button onclick="nextTrack()">⏭ Next</button>
+        <button onclick="shuffleTrack()">🔀 Shuffle</button>
+      </div>
+</div>
     </section>
 
     <section class="section">
@@ -162,32 +185,32 @@
         <button onclick="nextSlide()">Next</button>
       </div>  
       <div class="gallery-grid">
-        <img src="Images/image1.jpg" alt="Gallery Image 1" />
-        <img src="Images/image2.jpg" alt="Gallery Image 2" />
-        <img src="Images/image3.jpg" alt="Gallery Image 3" />
-        <img src="Images/image4.jpg" alt="Gallery Image 4" />
-        <img src="Images/image5.jpg" alt="Gallery Image 5" />
-        <img src="Images/image6.jpg" alt="Gallery Image 6" />
-        <img src="Images/image7.jpg" alt="Gallery Image 7" />
-        <img src="Images/image8.jpg" alt="Gallery Image 8" />
-        <img src="Images/image9.jpg" alt="Gallery Image 9" />
-        <img src="Images/image10.jpg" alt="Gallery Image 10" />
-        <img src="Images/image11.jpg" alt="Gallery Image 11" />
-	<img src="Images/image12.jpg" alt="Gallery Image 12" />
-        <img src="Images/image13.jpg" alt="Gallery Image 13" />
-	<img src="Images/image14.jpg" alt="Gallery Image 14" />
-        <img src="Images/image15.jpg" alt="Gallery Image 15" />
-        <img src="Images/image16.jpg" alt="Gallery Image 16" />
-	<img src="Images/image17.jpg" alt="Gallery Image 17" />
-        <img src="Images/image18.jpg" alt="Gallery Image 18" />
-        <img src="Images/image19.jpg" alt="Gallery Image 19" />
-        <img src="Images/image20.jpg" alt="Gallery Image 20" />
-	<img src="Images/image21.jpg" alt="Gallery Image 21" />
-        <img src="Images/image22.jpg" alt="Gallery Image 22" />
-        <img src="Images/image23.jpg" alt="Gallery Image 23" />
-	<img src="Images/image24.jpg" alt="Gallery Image 24" />
-        <img src="Images/image25.jpg" alt="Gallery Image 25" />
-	<!-- <img src="Images/image#.jpg" alt="Gallery Image #" /> -->
+        <img src="Images/image1.jpg" alt="Gallery Image 1" onclick="showSlide(0)" />
+        <img src="Images/image2.jpg" alt="Gallery Image 2" onclick="showSlide(0)" />
+        <img src="Images/image3.jpg" alt="Gallery Image 3" onclick="showSlide(0)" />
+        <img src="Images/image4.jpg" alt="Gallery Image 4" onclick="showSlide(0)"/>
+        <img src="Images/image5.jpg" alt="Gallery Image 5" onclick="showSlide(0)"/>
+        <img src="Images/image6.jpg" alt="Gallery Image 6" onclick="showSlide(0)"/>
+        <img src="Images/image7.jpg" alt="Gallery Image 7" onclick="showSlide(0)"/>
+        <img src="Images/image8.jpg" alt="Gallery Image 8" onclick="showSlide(0)"/>
+        <img src="Images/image9.jpg" alt="Gallery Image 9" onclick="showSlide(0)" />
+        <img src="Images/image10.jpg" alt="Gallery Image 10" onclick="showSlide(0)" />
+        <img src="Images/image11.jpg" alt="Gallery Image 11" onclick="showSlide(0)" />
+	<img src="Images/image12.jpg" alt="Gallery Image 12" onclick="showSlide(0)" />
+        <img src="Images/image13.jpg" alt="Gallery Image 13" onclick="showSlide(0)" />
+	<img src="Images/image14.jpg" alt="Gallery Image 14" onclick="showSlide(0)" />
+        <img src="Images/image15.jpg" alt="Gallery Image 15" onclick="showSlide(0)" />
+        <img src="Images/image16.jpg" alt="Gallery Image 16" onclick="showSlide(0)" />
+	<img src="Images/image17.jpg" alt="Gallery Image 17" onclick="showSlide(0)" />
+        <img src="Images/image18.jpg" alt="Gallery Image 18" onclick="showSlide(0)" />
+        <img src="Images/image19.jpg" alt="Gallery Image 19" onclick="showSlide(0)" />
+        <img src="Images/image20.jpg" alt="Gallery Image 20" onclick="showSlide(0)" />
+	<img src="Images/image21.jpg" alt="Gallery Image 21" onclick="showSlide(0)" />
+        <img src="Images/image22.jpg" alt="Gallery Image 22" onclick="showSlide(0)" />
+        <img src="Images/image23.jpg" alt="Gallery Image 23" onclick="showSlide(0)" />
+	<img src="Images/image24.jpg" alt="Gallery Image 24" onclick="showSlide(0)" />
+        <img src="Images/image25.jpg" alt="Gallery Image 25" onclick="showSlide(0)" />
+	<!-- <img src="Images/image#.jpg" alt="Gallery Image #" onclick="showSlide(0)" /> -->
       </div>
     </section>
   </div>
@@ -211,6 +234,45 @@
     function prevSlide() {
       showSlide(currentSlide - 1);
     }
+    const audio = document.getElementById('audio-player');
+    const tracks = [
+       "website_music/Ikson - Siesta.wav",
+       "website_music/Track2.mp3",
+       "website_music/Track3.mp3"
+    ];
+    let currentTrack = 0;
+
+    function togglePlayPause() {
+     if (audio.paused) {
+      audio.play();
+     } else {
+      audio.pause();}
+     }
+
+     function nextTrack() {
+      currentTrack = (currentTrack + 1) % tracks.length;
+      changeTrack();
+     }
+
+     function prevTrack() {
+      currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+      changeTrack();
+     }
+
+     function shuffleTrack() {
+      let next;
+      do {
+          next = Math.floor(Math.random() * tracks.length);
+      } while (next === currentTrack);
+          currentTrack = next;
+          changeTrack();
+      }
+
+      function changeTrack() {
+         audio.src = tracks[currentTrack];
+         audio.play();
+     }
+
   </script>
 </body>
 </html>
