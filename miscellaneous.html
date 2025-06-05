@@ -56,6 +56,23 @@
       text-align: center;
     }
 
+     .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+   .gallery-grid img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
     .carousel {
       position: relative;
       max-width: 600px;
@@ -143,6 +160,34 @@
       <div class="nav-buttons">
         <button onclick="prevSlide()">Previous</button>
         <button onclick="nextSlide()">Next</button>
+      </div>  
+      <div class="gallery-grid">
+        <img src="Images/image1.jpg" alt="Gallery Image 1" />
+        <img src="Images/image2.jpg" alt="Gallery Image 2" />
+        <img src="Images/image3.jpg" alt="Gallery Image 3" />
+        <img src="Images/image4.jpg" alt="Gallery Image 4" />
+        <img src="Images/image5.jpg" alt="Gallery Image 5" />
+        <img src="Images/image6.jpg" alt="Gallery Image 6" />
+        <img src="Images/image7.jpg" alt="Gallery Image 7" />
+        <img src="Images/image8.jpg" alt="Gallery Image 8" />
+        <img src="Images/image9.jpg" alt="Gallery Image 9" />
+        <img src="Images/image10.jpg" alt="Gallery Image 10" />
+        <img src="Images/image11.jpg" alt="Gallery Image 11" />
+	<img src="Images/image12.jpg" alt="Gallery Image 12" />
+        <img src="Images/image13.jpg" alt="Gallery Image 13" />
+	<img src="Images/image14.jpg" alt="Gallery Image 14" />
+        <img src="Images/image15.jpg" alt="Gallery Image 15" />
+        <img src="Images/image16.jpg" alt="Gallery Image 16" />
+	<img src="Images/image17.jpg" alt="Gallery Image 17" />
+        <img src="Images/image18.jpg" alt="Gallery Image 18" />
+        <img src="Images/image19.jpg" alt="Gallery Image 19" />
+        <img src="Images/image20.jpg" alt="Gallery Image 20" />
+	<img src="Images/image21.jpg" alt="Gallery Image 21" />
+        <img src="Images/image22.jpg" alt="Gallery Image 22" />
+        <img src="Images/image23.jpg" alt="Gallery Image 23" />
+	<img src="Images/image24.jpg" alt="Gallery Image 24" />
+        <img src="Images/image25.jpg" alt="Gallery Image 25" />
+	<!-- <img src="Images/image#.jpg" alt="Gallery Image #" /> -->
       </div>
     </section>
   </div>
