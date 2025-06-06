@@ -39,17 +39,15 @@
         }
 .sidebar {
     position: fixed;
-    top: 0;
+    top: 25vh;
     left: 0;
-    height: 25vh;
-    width: 160px;
+    height: auto;
+    width: 200px;
     background-color: #fff;
     border-right: 1px solid #ccc;
-     padding: 1rem;
-    overflow-y: auto;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     z-index: 101;
 }
 
@@ -88,8 +86,8 @@ main {
 @media (max-width: 768px) {
     .sidebar {
         position: relative;
+        top: 10vh;
         width: 100%;
-        height: auto;
         border-right: none;
         border-bottom: 1px solid #ccc;
         flex-direction: row;
@@ -106,6 +104,10 @@ main {
         margin-left: 0;
     }
 }
+    nicer{
+        text-align: center;
+        font-weight: bold;
+    }
     </style>
 </head>
 <body>
@@ -130,7 +132,7 @@ main {
         </div>
     </nav>
 <div class="sidebar">
- Let's Connect
+ <nicer>Let's Connect</nicer>
   <ul> 
     <li><a href="taejones@cs.washington.edu">Email Me</a></li>
     <li><a href="http://www.linkedin.com/in/tae-jones">Linkedin</a></li>
@@ -151,8 +153,8 @@ main {
                         
                         <p>My academic journey includes a BBA in Information Systems with a minor in Applied Statistics, and a MS in Healthcare Management & Informatics from Kennesaw State University, where I was advised by <a href="https://facultyweb.kennesaw.edu/arandol3/index.php">Dr. Adriane Randolph</a> in <a href="https://www.kennesaw.edu/coles/academics/information-systems-security/labs/brainlab/">The BrainLab</a>.</p>
                         
-                        <p>What drives me is the belief that technology should be a thoughtful partner in health management, not just a data collector. I'm particularly interested in how we can design systems that truly understand and adapt to the complex realities of living with multiple health conditions.</p>
-                    </div>
+                        <!-- <p>What drives me is the belief that technology should be a thoughtful partner in health management, not just a data collector. I'm particularly interested in how we can design systems that truly understand and adapt to the complex realities of living with multiple health conditions.</p>
+                   --> </div>
                 </div>
             </section>
                     
