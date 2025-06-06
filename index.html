@@ -41,13 +41,16 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 25vh;
     width: 160px;
     background-color: #fff;
-    border-right: 1px solid #ddd;
-    padding-top: 100px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    z-index: 200;
+    border-right: 1px solid #ccc;
+     padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 101;
 }
 
 .sidebar ul {
@@ -59,22 +62,49 @@
     margin: 20px 0;
     text-align: center;
 }
+       
+ .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+.sidebar a:hover {
+    background: linear-gradient(135deg, #667eea 0%, #48bb78 100%);
+    color: white;
 
-.sidebar ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    display: block;
-    transition: color 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-    color: #48bb78;
-}
+body {
+    margin-left: 200px;
+}    
 
 main {
     margin-left: 180px; /* Adjust to make space for the sidebar */
     padding: 3rem 2rem;
+}
+    
+    /* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar a {
+        margin: 0.5rem;
+        flex: 1 1 45%;
+        text-align: center;
+    }
+
+    body {
+        margin-left: 0;
+    }
 }
     </style>
 </head>
@@ -99,13 +129,14 @@ main {
             </div>
         </div>
     </nav>
-<aside class="sidebar">
-  <ul> Let's Connect
+<div class="sidebar">
+ Let's Connect
+  <ul> 
     <li><a href="taejones@cs.washington.edu">Email Me</a></li>
     <li><a href="http://www.linkedin.com/in/tae-jones">Linkedin</a></li>
     <li><a href="https://tae-research.com/Documents/Tae%20Jones'_CV.pdf">View Resume</a></li>
   </ul>
-</aside>
+</div>
     <main>
       <!-- <div class="container"> -->
             <section class="section">
