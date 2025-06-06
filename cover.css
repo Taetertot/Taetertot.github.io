@@ -233,7 +233,7 @@ header h1 {
  .name-with-img {
   display: inline-flex;
   align-items: center;
-  gap: 55rem; /* space between text and image */
+  gap: 155rem; /* space between text and image */
 }
 
 .name-img {
@@ -242,4 +242,5 @@ header h1 {
   border-radius: 50%; /* makes it round */
   object-fit: cover;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  float: right;
 }
