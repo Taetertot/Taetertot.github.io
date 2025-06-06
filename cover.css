@@ -1,288 +1,30 @@
-/*
- * Globals
- */
-
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-
-/*
- * Base structure
- */
-
-.body {
-  text-shadow: 90 .05rem .1rem rgba(90, 90, 90, .5);
-  box-shadow: inset 90 90 5rem rgba(90, 90, 90, .5);
-  background-color: rgb(69,69,69);
+/* More rounded corners for sections */
+.section {
+  border-radius: 20px;
 }
 
-.cover-container {
-  max-width: 42em;
-}
-
-
-/*
- * Header
- */
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-/* Opacity */
-.opacity-0 {
-  opacity:0!important;
-}
-.opacity-1 {
-  opacity:0.2!important;
-}
-.opacity-2 {
-  opacity:0.4!important;
-}
-.opacity-3 {
-  opacity:0.6!important;
-}
-.opacity-4 {
-  opacity:.8!important;
-}
-.opacity-5 {
-  opacity:1!important;
-}
- 
-/* Shawdow */
-.box-shadow-teal {
-  box-shadow: 5px 10px 8px 10px #5bc0de;
-}
-
-.box-shadow-green {
-  box-shadow: 5px 10px 8px 10px #5cb85c;
-}
-
-.post {
-  background-color: rgb(50,50,50);
-}
-
-/* My Icon */
-.photo-img {
-  max-width: 120%;
-  max-height: 120%;
-}
-
-.indent { 
-   text-indent: 110px;
-}
-.right-indent { 
-   text-indent: 410px;
-}
-
-@media (min-width: 768px) {
-.slide {
-padding-right: 40px;
-padding-left: 220px; /* 180 + 40 */
-}
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-.empty {
-  min-height: 260px;
-  margin-bottom: 10px;
-}
-
-#btn-back-to-top {
+/* Back to top button */
+#backToTop {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-}
-
-/* Container holding the image and the text */
-.hold {
-  position: relative;
-  text-align: center;
-}
-
-.arrow {
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  background: none;
+  bottom: 30px;
+  right: 30px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
   border: none;
-  outline:none;
-}  
-
-.icon-img {
+  background-color: #667eea;
+  color: white;
   border-radius: 30px;
-  width: 150px;
-  height: 150px;
-
-}
-
-/* Navigation */
-.link-light:hover {
-  color: green !important;
-}
-
-.tab:hover {
-  background-color: green !important;
-  }
-
-.tab-text:hover {
-  color: white !important;
-}
-
-/* Picture Gallery */
-.intro { 
-  text-align: center; 
-  font-family: Arial;
-}
-
-h2 { 
-  font-size: 36px;
-}
-
-p { 
-  font-size: 14pt;
-}
-
-#image-gallery { 
-  width: 600px; 
-  margin: 0 auto;
-}
-
-#current-image { 
-  max-width: 80%;
-  height: 380px;
-  border-radius: 10%;
-} 
-
-#image-thumbs { 
-  display: flex; 
-  justify-content: center; 
-  margin-top: 20px;
-  border-radius: 30%;
-}
-
-.thumb { 
-  width: 80px; 
-  height: 80px; 
-  object-fit: cover; 
-  margin-right: 10px; 
   cursor: pointer;
-}
-
-
-* {
-  box-sizing: border-box;
-}
-
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
-}
-
-/* Hide the images by default */
-.mySlides {
   display: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
 }
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
+#backToTop:hover {
+  background-color: #5a67d8;
 }
