@@ -51,7 +51,7 @@
       background: white;
       margin-bottom: 2rem;
       padding: 2rem;
-      border-radius: 10px;
+      border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     }
 
@@ -102,7 +102,7 @@
 
     .slides img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 15px;
     }
 
     .nav-buttons {
@@ -116,7 +116,7 @@
       border: none;
       background: #667eea;
       color: white;
-      border-radius: 5px;
+      border-radius: 50px;
       cursor: pointer;
       transition: background 0.3s ease;
     }
@@ -133,7 +133,7 @@
      border: none;
      background: #48bb78;
      color: white;
-     border-radius: 5px;
+     border-radius: 15px;
      cursor: pointer;
    }
     .music-controls button:hover {
@@ -143,7 +143,9 @@
 </head>
 <body>
   <header>
-     <nav>
+   <h1>Miscellaneous</h1>
+  </header>
+ <nav>
         <div class="container">
             <div class="nav-container">
                 <ul class="nav-links">
@@ -154,9 +156,6 @@
             </div>
         </div>
     </nav>
-    <h1>Miscellaneous</h1>
-  </header>
-
   <div class="container">
     <section class="section music-player">
       <h2>Tunes</h2>
@@ -219,6 +218,8 @@
         <button onclick="prevSlide()">Previous</button>
         <button onclick="nextSlide()">Next</button>
       </div>  
+      <br>
+      <br>	    
       <div class="gallery-grid">
     <img src="Images/image1.jpg" alt="Gallery Image 1" onclick="showSlide(0)" />
                 <img src="Images/image2.jpg" alt="Gallery Image 2" onclick="showSlide(1)" />
