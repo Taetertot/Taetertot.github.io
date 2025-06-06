@@ -188,7 +188,8 @@ header h1 {
   font-weight: 600;
   letter-spacing: 1px;
 }
-.title-style {
+/* My name*/
+  .title-style {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
   font-size: 2.8rem;
@@ -231,3 +232,18 @@ header h1 {
             margin: 0 auto;
             padding: 0 20px;
         }
+
+/* My photo*/
+ .name-with-img {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* space between text and image */
+}
+
+.name-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; /* makes it round */
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
