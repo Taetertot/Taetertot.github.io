@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Miscellaneous - Tae Jones</title>
+  <title>???</title>
   <style>
     * {
       margin: 0;
@@ -42,6 +42,11 @@
       padding: 2rem;
     }
 
+    .section-photos {
+      padding: 30px;
+      border-bottom: 1px solid #eee;
+        }
+	  
     .section {
       background: white;
       margin-bottom: 2rem;
@@ -63,18 +68,21 @@
     }
 
      .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 0.25rem;
-    }
+      	display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+        }
    .gallery-grid img {
-      width: 75px;
-      height: 75px;
-      object-fit: cover;
-      border-radius: 70%;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
+ 	width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
     .gallery-grid img:hover {
       transform: scale(1.05);
@@ -168,15 +176,14 @@
 	<source src="website_music/qlowdy-morning.mp3" type="audio/mpeg" />
       </audio>
       <div class="music-controls">
-        <button onclick="prevTrack()">⏮ Back</button>
-        <button onclick="togglePlayPause()">⏯ Play/Pause</button>
-        <button onclick="nextTrack()">⏭ Next</button>
-        <button onclick="shuffleTrack()">🔀 Shuffle</button>
+                <button onclick="prevTrack()">⏮ Back</button>
+                <button onclick="togglePlayPause()">⏯ Play/Pause</button>
+                <button onclick="nextTrack()">⏭ Next</button>
+                <button onclick="shuffleTrack()">🔀 Shuffle</button>
       </div>
-</div>
     </section>
 
-    <section class="section">
+    <section class="section-photos">
       <h2>What Tae Is Up To</h2>
       <div class="carousel" id="carousel">
         <div class="slides" id="slides">
@@ -213,104 +220,95 @@
         <button onclick="nextSlide()">Next</button>
       </div>  
       <div class="gallery-grid">
-        <img src="Images/image1.jpg" alt="Gallery Image 1" onclick="showSlide(1)" />
-        <img src="Images/image2.jpg" alt="Gallery Image 2" onclick="showSlide(2)" />
-        <img src="Images/image3.jpg" alt="Gallery Image 3" onclick="showSlide(3)" />
-        <img src="Images/image4.jpg" alt="Gallery Image 4" onclick="showSlide(4)"/>
-        <img src="Images/image5.jpg" alt="Gallery Image 5" onclick="showSlide(5)"/>
-        <img src="Images/image6.jpg" alt="Gallery Image 6" onclick="showSlide(6)"/>
-        <img src="Images/image7.jpg" alt="Gallery Image 7" onclick="showSlide(7)"/>
-        <img src="Images/image8.jpg" alt="Gallery Image 8" onclick="showSlide(8)"/>
-        <img src="Images/image9.jpg" alt="Gallery Image 9" onclick="showSlide(9)" />
-        <img src="Images/image10.jpg" alt="Gallery Image 10" onclick="showSlide(10)" />
-        <img src="Images/image11.jpg" alt="Gallery Image 11" onclick="showSlide(11)" />
-	<img src="Images/image12.jpg" alt="Gallery Image 12" onclick="showSlide(12)" />
-        <img src="Images/image13.jpg" alt="Gallery Image 13" onclick="showSlide(13)" />
-	<img src="Images/image14.jpg" alt="Gallery Image 14" onclick="showSlide(14)" />
-        <img src="Images/image15.jpg" alt="Gallery Image 15" onclick="showSlide(15)" />
-        <img src="Images/image16.jpg" alt="Gallery Image 16" onclick="showSlide(16)" />
-	<img src="Images/image17.jpg" alt="Gallery Image 17" onclick="showSlide(17)" />
-        <img src="Images/image18.jpg" alt="Gallery Image 18" onclick="showSlide(18)" />
-        <img src="Images/image19.jpg" alt="Gallery Image 19" onclick="showSlide(19)" />
-        <img src="Images/image20.jpg" alt="Gallery Image 20" onclick="showSlide(20)" />
-	<img src="Images/image21.jpg" alt="Gallery Image 21" onclick="showSlide(21)" />
-        <img src="Images/image22.jpg" alt="Gallery Image 22" onclick="showSlide(22)" />
-        <img src="Images/image23.jpg" alt="Gallery Image 23" onclick="showSlide(23)" />
-	<img src="Images/image24.jpg" alt="Gallery Image 24" onclick="showSlide(24)" />
-        <img src="Images/image25.jpg" alt="Gallery Image 25" onclick="showSlide(25)" />
-	<!-- <img src="Images/image#.jpg" alt="Gallery Image #" onclick="showSlide(3)" /> -->
+    <img src="Images/image1.jpg" alt="Gallery Image 1" onclick="showSlide(0)" />
+                <img src="Images/image2.jpg" alt="Gallery Image 2" onclick="showSlide(1)" />
+                <img src="Images/image3.jpg" alt="Gallery Image 3" onclick="showSlide(2)" />
+                <img src="Images/image4.jpg" alt="Gallery Image 4" onclick="showSlide(3)"/>
+                <img src="Images/image5.jpg" alt="Gallery Image 5" onclick="showSlide(4)"/>
+                <img src="Images/image6.jpg" alt="Gallery Image 6" onclick="showSlide(5)"/>
+                <img src="Images/image7.jpg" alt="Gallery Image 7" onclick="showSlide(6)"/>
+                <img src="Images/image8.jpg" alt="Gallery Image 8" onclick="showSlide(7)"/>
+                <img src="Images/image9.jpg" alt="Gallery Image 9" onclick="showSlide(8)" />
+                <img src="Images/image10.jpg" alt="Gallery Image 10" onclick="showSlide(9)" />
+                <img src="Images/image11.jpg" alt="Gallery Image 11" onclick="showSlide(10)" />
+                <img src="Images/image12.jpg" alt="Gallery Image 12" onclick="showSlide(11)" />
+                <img src="Images/image13.jpg" alt="Gallery Image 13" onclick="showSlide(12)" />
+                <img src="Images/image14.jpg" alt="Gallery Image 14" onclick="showSlide(13)" />
+                <img src="Images/image15.jpg" alt="Gallery Image 15" onclick="showSlide(14)" />
+                <img src="Images/image16.jpg" alt="Gallery Image 16" onclick="showSlide(15)" />
+                <img src="Images/image17.jpg" alt="Gallery Image 17" onclick="showSlide(16)" />
+                <img src="Images/image18.jpg" alt="Gallery Image 18" onclick="showSlide(17)" />
+                <img src="Images/image19.jpg" alt="Gallery Image 19" onclick="showSlide(18)" />
+                <img src="Images/image20.jpg" alt="Gallery Image 20" onclick="showSlide(19)" />
+                <img src="Images/image21.jpg" alt="Gallery Image 21" onclick="showSlide(20)" />
+                <img src="Images/image22.jpg" alt="Gallery Image 22" onclick="showSlide(21)" />
+                <img src="Images/image23.jpg" alt="Gallery Image 23" onclick="showSlide(22)" />
+                <img src="Images/image24.jpg" alt="Gallery Image 24" onclick="showSlide(23)" />
+                <img src="Images/image25.jpg" alt="Gallery Image 25" onclick="showSlide(24)" />
+	<!-- <img src="Images/image#.jpg" alt="Gallery Image #" onclick="showSlide(#)" /> -->
       </div>
     </section>
   </div>
 
   <script>
-    let currentSlide = 0;
-    const slides = document.getElementById('slides');
-    const totalSlides = slides.children.length;
+        let currentSlide = 0;
+        let currentTrack = 0;
+        const slides = document.querySelectorAll('.slides img');
+        const tracks = document.querySelectorAll('#audio-player source');
+        const audioPlayer = document.getElementById('audio-player');
 
-    function showSlide(index) {
-      if (index < 0) index = totalSlides - 1;
-      if (index >= totalSlides) index = 0;
-      currentSlide = index;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    }
+        function showSlide(index) {
+            currentSlide = index;
+            const slideContainer = document.getElementById('slides');
+            slideContainer.style.transform = `translateX(-${index * 100}%)`;
+        }
 
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
 
-    function prevSlide() {
-      showSlide(currentSlide - 1);
-    }
-    const audio = document.getElementById('audio-player');
-    const tracks = [
-       "website_music/Ikson - Siesta.wav",
-       "website_music/Track2.mp3",
-       	"website_music/aerohead-path-of-the-fireflies.mp3", 
-	"website_music/alex-productions-aesthetic.mp3",
-	"website_music/alex-productions-fresh.mp3", 
-	"wwebsite_music/alex-productions-new-one.mp3",
-	"website_music/friendzoned-antidepresseur.mp3",
-	"website_music/fsm-team-escp-cyberfunk.mp3", 
-	"website_music/fsm-team-escp-kinetics.mp3", 
-	"website_music/fsm-team-escp-lucid-dreaming.mp3", 
-	"website_music/fsm-team-escp-small-town-boy.mp3", 
-	"website_music/fsm-team-escp-urban-rainfall-rhythms.mp3", 
-	"website_music/qlowdy-evening.mp3",
-	"website_music/qlowdy-morning.mp3",
-    ];
-    let currentTrack = 0;
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
 
-    function togglePlayPause() {
-     if (audio.paused) {
-      audio.play();
-     } else {
-      audio.pause();}
-     }
+        function nextTrack() {
+            currentTrack = (currentTrack + 1) % tracks.length;
+            audioPlayer.src = tracks[currentTrack].src;
+            audioPlayer.load();
+            audioPlayer.play();
+        }
 
-     function nextTrack() {
-      currentTrack = (currentTrack + 1) % tracks.length;
-      changeTrack();
-     }
+        function prevTrack() {
+            currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+            audioPlayer.src = tracks[currentTrack].src;
+            audioPlayer.load();
+            audioPlayer.play();
+        }
 
-     function prevTrack() {
-      currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
-      changeTrack();
-     }
+        function togglePlayPause() {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+            } else {
+                audioPlayer.pause();
+            }
+        }
 
-     function shuffleTrack() {
-      let next;
-      do {
-          next = Math.floor(Math.random() * tracks.length);
-      } while (next === currentTrack);
-          currentTrack = next;
-          changeTrack();
-      }
+        function shuffleTrack() {
+            currentTrack = Math.floor(Math.random() * tracks.length);
+            audioPlayer.src = tracks[currentTrack].src;
+            audioPlayer.load();
+            audioPlayer.play();
+        }
 
-      function changeTrack() {
-         audio.src = tracks[currentTrack];
-         audio.play();
-     }
+        // Initialize first track
+        if (tracks.length > 0) {
+            audioPlayer.src = tracks[0].src;
+        }
+
+        // Auto-advance to next track when current one ends
+        audioPlayer.addEventListener('ended', nextTrack);
 
   </script>
 </body>
