@@ -1,1 +1,79 @@
+ .section-photos {
+      padding: 30px;
+      border-bottom: 1px solid #eee;
+        }
+ .music-player {
+      text-align: center;
+    }
+
+   .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+      }
+ .gallery-grid img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+ .gallery-grid img:hover {
+    transform: scale(1.05);
+      }
+
+.carousel {
+    position: relative;
+    max-width: 300px;
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 10px;
+      }
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+      }
+.slides img {
+    width: 100%;
+    border-radius: 15px;
+      }
+
+ .nav-buttons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+.nav-buttons button {
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border: none;
+      background: #667eea;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+        .nav-buttons button:hover {
+              background: #5a67d8;
+            }
+.music-controls {
+      margin-top: 1rem;
+    }
+.music-controls button {
+     padding: 0.5rem 1rem;
+     margin: 0 0.25rem;
+     border: none;
+     background: #48bb78;
+     color: white;
+     border-radius: 15px;
+     cursor: pointer;
+    }
+        .music-controls button:hover {
+             background: #38a169;
+            }
 
