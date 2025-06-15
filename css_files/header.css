@@ -1,1 +1,23 @@
-text
+ header {
+        background: linear-gradient(135deg, #667eea 0%, #48bb78 50%, #764ba2 100%);
+        color: white;
+        padding: 2rem 0;
+        text-align: center;
+    }
+.header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .header-content .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .header-content .tagline {
+            font-size: 1.1rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
