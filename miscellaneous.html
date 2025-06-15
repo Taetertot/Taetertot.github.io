@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="css_files/main_navigation_bar.css">
 	<link rel="stylesheet" href="css_files/miscellaneous.css">
 <script src="js_files/2-top-btn.js"> </script>
+<script src="js_files/music.js"> </script>
+<script src="js_files/pics.js"> </script>
 </head>
 <body>
   <header>
@@ -88,8 +90,6 @@
         <button onclick="nextSlide()">Next</button>
       </div>  
  </section>	   
-      <br>
-      <br>	    
 <section class="section-photos">      
 	<div class="gallery-grid">
 	    <img src="Images/image1.jpg" alt="Gallery Image 1" onclick="showSlide(0)" />
@@ -120,69 +120,7 @@
 		<!-- <img src="Images/image#.jpg" alt="Gallery Image #" onclick="showSlide(#)" /> -->
 	      </div>
     </section>
-  </div>
-
-  <script>
-        let currentSlide = 0;
-        let currentTrack = 0;
-        const slides = document.querySelectorAll('.slides img');
-        const tracks = document.querySelectorAll('#audio-player source');
-        const audioPlayer = document.getElementById('audio-player');
-
-        function showSlide(index) {
-            currentSlide = index;
-            const slideContainer = document.getElementById('slides');
-            slideContainer.style.transform = `translateX(-${index * 100}%)`;
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function nextTrack() {
-            currentTrack = (currentTrack + 1) % tracks.length;
-            audioPlayer.src = tracks[currentTrack].src;
-            audioPlayer.load();
-            audioPlayer.play();
-        }
-
-        function prevTrack() {
-            currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
-            audioPlayer.src = tracks[currentTrack].src;
-            audioPlayer.load();
-            audioPlayer.play();
-        }
-
-        function togglePlayPause() {
-            if (audioPlayer.paused) {
-                audioPlayer.play();
-            } else {
-                audioPlayer.pause();
-            }
-        }
-
-        function shuffleTrack() {
-            currentTrack = Math.floor(Math.random() * tracks.length);
-            audioPlayer.src = tracks[currentTrack].src;
-            audioPlayer.load();
-            audioPlayer.play();
-        }
-
-        // Initialize first track
-        if (tracks.length > 0) {
-            audioPlayer.src = tracks[0].src;
-        }
-
-        // Auto-advance to next track when current one ends
-        audioPlayer.addEventListener('ended', nextTrack);
-
-  </script>
+  </div>       
 <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</button>	
 </body>
 </html>
