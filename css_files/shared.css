@@ -24,6 +24,13 @@ main {
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
+.section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #667eea 0%, #48bb78 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 /* My name*/
   .title-style {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
