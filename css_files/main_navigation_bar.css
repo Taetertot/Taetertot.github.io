@@ -1,1 +1,32 @@
-text
+nav {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+.nav-container {
+          display: flex;
+          justify-content: center;
+          padding: 1rem 0;
+   }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+   }
+
+      .nav-links a {
+          text-decoration: none;
+          color: #333;
+          font-weight: 500;
+          padding: 0.5rem 1rem;
+          border-radius: 15px;
+          transition: all 0.3s ease;
+      }
+
+      .nav-links a:hover {
+          background: linear-gradient(135deg, #667eea 0%, #48bb78 100%);
+          color: white;
+      }
