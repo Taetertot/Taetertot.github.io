@@ -1,1 +1,12 @@
-
+/* My photo*/
+.name-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 30%; /* makes it round */
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  position: absolute;
+ top: 8px;
+ right: 16px;
+ 
+}
