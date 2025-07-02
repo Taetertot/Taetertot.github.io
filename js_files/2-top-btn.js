@@ -1,12 +1,11 @@
 <script>
-  const backToTop = document.getElementById("backToTop");
+ const backToTop = document.getElementById("backToTop");
 
- window.addEventListener('scroll', function () {
-  const button = document.getElementById('backToTop');
+window.addEventListener('scroll', function () {
   if (window.scrollY > 10) {
-    button.style.display = 'block';
+    backToTop.style.display = 'block';
   } else {
-    button.style.display = 'none';
+    backToTop.style.display = 'none';
   }
 });
 </script>
