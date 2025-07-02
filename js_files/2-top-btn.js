@@ -1,4 +1,3 @@
-<script>
 document.addEventListener('DOMContentLoaded', function() {
   const backToTop = document.getElementById("backToTop");
   window.addEventListener('scroll', function () {
@@ -9,4 +8,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-</script>
