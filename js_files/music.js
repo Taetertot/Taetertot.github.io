@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 ];
     
 //Get reference to the track name display
-const currentTrackName = document.getElementById('current-track-name');
+const currentTrackName = document.getElementById('current-track-name'); 
 
 //LOAD TRACK FUNCTION - Updates both audio source and track name
 function loadTrack(index) {
