@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
 //Get reference to the track name display
 const currentTrackName = document.getElementById('current-track-name'); 
+const slides = document.querySelectorAll('.slides img');
+const audioPlayer = document.getElementById('audio-player');
 
 //LOAD TRACK FUNCTION - Updates both audio source and track name
 function loadTrack(index) {
@@ -34,9 +36,9 @@ function loadTrack(index) {
     audioPlayer.load();
 }
     
-    const slides = document.querySelectorAll('.slides img');
-    const audioPlayer = document.getElementById('audio-player');
-    
+
+
+
 // TRACK NAVIGATION FUNCTIONS - These automatically update the name
 function nextTrack() {
     const nextIndex = (currentTrack + 1) % trackData.length;
@@ -87,4 +89,5 @@ if (trackData.length > 0) {
     window.nextTrack = nextTrack;
     window.prevTrack = prevTrack;
     window.shuffleTrack = shuffleTrack;
-};
+}
+});
