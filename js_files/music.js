@@ -53,7 +53,7 @@ function prevTrack() {
 function shuffleTrack() {
     const randomIndex = Math.floor(Math.random() * trackData.length);
     loadTrack(randomIndex); // This will update the name automatically
-    audioPlayer.play().catch(error => console.log('Playbook failed:', error));
+    audioPlayer.play().catch(error => console.log('Playback failed:', error));
 }  
 
     // Slide functions
@@ -86,6 +86,5 @@ if (trackData.length > 0) {
     window.prevSlide = prevSlide;
     window.nextTrack = nextTrack;
     window.prevTrack = prevTrack;
-    window.togglePlayPause = togglePlayPause;
     window.shuffleTrack = shuffleTrack;
 };
