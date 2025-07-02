@@ -30,12 +30,12 @@
   <div class="container">
     <section class="section music-player">
       <h2>Tunes</h2>
+      <h3 id= "current-track-name"></h3>
       <audio id="audio-player" controls>
   	<source src="website_music/Ikson - Siesta.wav" type="audio/mpeg" />	
       </audio>
       <div class="music-controls">
  	 <button class="btn green" onclick="prevTrack()" aria-label="Previous track">⏮ Back</button>
-  	 <button class="btn blue" onclick="togglePlayPause()" aria-label="Play or pause">⏯ Play/Pause</button>
   	 <button class="btn green" onclick="nextTrack()" aria-label="Next track">⏭ Next</button>
  	 <button class="btn purple" onclick="shuffleTrack()" aria-label="Shuffle tracks">🔀 Shuffle</button>	      
       </div>
