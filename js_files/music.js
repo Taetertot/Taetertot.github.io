@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const trackData = [
     { url: "website_music/Ikson - Siesta.wav", name: "Ikson - \"Siesta\"" },
     { url: "website_music/aerohead-path-of-the-fireflies.mp3", name: "Aerohead - \"Path of the Fireflies\"" },
-    { url: "website_music/alex-productions-aesthetic.mp3", name: "Alex Productions -\"Aesthetic\"" },
+    { url: "website_music/alex-productions-aesthetic.mp3", name: "Alex Productions - \"Aesthetic\"" },
     { url: "website_music/alex-productions-fresh.mp3", name: "Alex Productions - \"Fresh\"" },
     { url: "website_music/alex-productions-new-one.mp3", name: "Alex Productions - \"New One\"" },
     { url: "website_music/friendzoned-antidepresseur.mp3", name: "Friendzoned - \"Antidepresseur\"" },
