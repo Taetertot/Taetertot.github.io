@@ -88,4 +88,4 @@ if (trackData.length > 0) {
     window.prevTrack = prevTrack;
     window.togglePlayPause = togglePlayPause;
     window.shuffleTrack = shuffleTrack;
-});
+};
