@@ -148,6 +148,7 @@ main {
         .publication-link:hover {
             background: linear-gradient(135deg, #5a67d8 0%, #38a169 100%);
             transform: translateY(-2px);
+            color: white;    
         }
 
 .publication-link.secondary {
@@ -156,6 +157,7 @@ main {
 }
         .publication-link.secondary:hover {
             background-color: #cbd5e0;
+            color: white;    
         }
 
 @media (max-width: 768px) {
