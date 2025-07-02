@@ -1,4 +1,4 @@
- (function () {
+ document.addEventListener('DOMContentLoaded', function () {
       var target = document.currentScript.parentElement;
       window.addEventListener('load', function () {
         calendar.schedulingButton.load({
