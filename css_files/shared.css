@@ -183,7 +183,10 @@ main {
     transform: scale(1.05);
     box-shadow: 0 6px 25px rgba(118, 75, 162, 0.6);
   }
-
+#schedule-button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
 @media (max-width: 768px) {
             .header-content h1 {
                 font-size: 2rem;
