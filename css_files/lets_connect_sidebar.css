@@ -1,10 +1,11 @@
 .sidebar {
      background-color: #fff;
-     border-right: 1px solid #ccc;
-     padding: 1rem;
+     padding: 3rem;
      position: sticky;
      top: 6.5rem; /* height of header + nav */
      align-self: start;
+     margin-bottom: 2rem;
+     border-radius: 15px;
    }
    
         .sidebar ul {
