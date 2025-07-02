@@ -1,6 +1,6 @@
 .sidebar {
      background-color: #fff;
-     padding: 3rem;
+     padding: 1rem;
      position: sticky;
      top: 6.5rem; /* height of header + nav */
      align-self: start;
