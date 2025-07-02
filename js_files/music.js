@@ -3,19 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentTrack = 0;
     
     const trackData = [
-    { url: "website_music/Ikson - Siesta.wav", name: "Ikson - \"Siesta \"" },
-    { url: "website_music/aerohead-path-of-the-fireflies.mp3", name: "Aerohead - &ldquo; Path of the Fireflies &rdquo;" },
-    { url: "website_music/alex-productions-aesthetic.mp3", name: "Alex Productions - &ldquo; Aestheticr&ldquo;" },
-    { url: "website_music/alex-productions-fresh.mp3", name: "Alex Productions - &ldquo; Fresh &rdquo;" },
-    { url: "website_music/alex-productions-new-one.mp3", name: "Alex Productions - &ldquo; New One &rdquo;" },
-    { url: "website_music/friendzoned-antidepresseur.mp3", name: "Friendzoned - &ldquo; Antidepresseur &rdquo;" },
-    { url: "website_music/fsm-team-escp-cyberfunk.mp3", name: "FSM Team ESCP - &ldquo; Cyberfunk &rdquo;" },
-    { url: "website_music/fsm-team-escp-kinetics.mp3", name: "FSM Team ESCP - &ldquo; Kinetics&rdquo;" },
-    { url: "website_music/fsm-team-escp-lucid-dreaming.mp3", name: "FSM Team ESCP - &ldquo; Lucid Dreaming &rdquo;" },
-    { url: "website_music/fsm-team-escp-small-town-boy.mp3", name: "FSM Team ESCP - &ldquo; Small Town Boy &rdquo;" },
-    { url: "website_music/fsm-team-escp-urban-rainfall-rhythms.mp3", name: "FSM Team ESCP - &ldquo; Urban Rainfall Rhythms &rdquo;" },
-    { url: "website_music/qlowdy-evening.mp3", name: "Qlowdy - &ldquo; Evening &rdquo;" },
-    { url: "website_music/qlowdy-morning.mp3", name: "Qlowdy - &ldquo; Morning &rdquo;" }
+    { url: "website_music/Ikson - Siesta.wav", name: "Ikson - \"Siesta\"" },
+    { url: "website_music/aerohead-path-of-the-fireflies.mp3", name: "Aerohead - \"Path of the Fireflies\"" },
+    { url: "website_music/alex-productions-aesthetic.mp3", name: "Alex Productions -\"Aesthetic\"" },
+    { url: "website_music/alex-productions-fresh.mp3", name: "Alex Productions - \"Fresh\"" },
+    { url: "website_music/alex-productions-new-one.mp3", name: "Alex Productions - \"New One\"" },
+    { url: "website_music/friendzoned-antidepresseur.mp3", name: "Friendzoned - \"Antidepresseur\"" },
+    { url: "website_music/fsm-team-escp-cyberfunk.mp3", name: "FSM Team ESCP - \"Cyberfunk\"" },
+    { url: "website_music/fsm-team-escp-kinetics.mp3", name: "FSM Team ESCP - \"Kinetics\"" },
+    { url: "website_music/fsm-team-escp-lucid-dreaming.mp3", name: "FSM Team ESCP - \"Lucid Dreaming\"" },
+    { url: "website_music/fsm-team-escp-small-town-boy.mp3", name: "FSM Team ESCP - \"Small Town Boy\"" },
+    { url: "website_music/fsm-team-escp-urban-rainfall-rhythms.mp3", name: "FSM Team ESCP \"Urban Rainfall Rhythms\"" },
+    { url: "website_music/qlowdy-evening.mp3", name: "Qlowdy - \"Evening\"" },
+    { url: "website_music/qlowdy-morning.mp3", name: "Qlowdy - \"Morning\"" }
 ];
     
 //Get reference to the track name display
