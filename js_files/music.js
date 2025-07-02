@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentTrack = 0;
     
     const trackData = [
-    { url: "website_music/Ikson - Siesta.wav", name: "Ikson - &ldquo; Siesta &rdquo;" },
+    { url: "website_music/Ikson - Siesta.wav", name: "Ikson - &quot; Siesta &quot; },
     { url: "website_music/aerohead-path-of-the-fireflies.mp3", name: "Aerohead - &ldquo; Path of the Fireflies &rdquo;" },
     { url: "website_music/alex-productions-aesthetic.mp3", name: "Alex Productions - &ldquo; Aestheticr&ldquo;" },
     { url: "website_music/alex-productions-fresh.mp3", name: "Alex Productions - &ldquo; Fresh &rdquo;" },
