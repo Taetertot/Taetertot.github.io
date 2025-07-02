@@ -73,7 +73,15 @@
      border-radius: 15px;
      cursor: pointer;
     }
-        .music-controls button:hover {
+  .music-controls button:hover {
              background: #38a169;
             }
+    audioPlayer.play
 
+#backToTop {
+    display: none; /* Hide by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
