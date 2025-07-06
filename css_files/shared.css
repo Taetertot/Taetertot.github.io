@@ -5,7 +5,7 @@
     }
 body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
+      background-color: #464444;
       margin: 0;
       padding: 0;
     }
@@ -89,7 +89,7 @@ main {
     margin-top: 2rem;
 }
 .publication {
-    background: #f8f9fa;
+    background: #131313;
     border-left: 4px solid #48bb78;
     padding: 2rem;
     border-radius: 15px;
