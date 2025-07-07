@@ -1,5 +1,5 @@
 .sidebar {
-     background-color: #fff;
+     background-color: black;
      padding: 1rem;
      position: sticky;
      top: 6.5rem; /* height of header + nav */
@@ -20,7 +20,7 @@
     
         .sidebar ul li a {
             text-decoration: none;
-            color: #333;
+            color: white;
             font-weight: 500;
             padding: 0.5rem 1rem;
             border-radius: 15px;
@@ -29,8 +29,7 @@
  
         .sidebar a:hover {
             background: linear-gradient(135deg, #667eea 0%, #48bb78 100%);
-            color: white;
-        }
+                    }
  .layout {
       display: grid;
       grid-template-columns: 200px 1fr;
