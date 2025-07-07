@@ -18,6 +18,7 @@
         .sidebar ul li {
             margin: 20px 0;
             text-align: center;
+            color: white;
         }
     
         .sidebar ul li a {
@@ -26,6 +27,7 @@
             padding: 0.5rem 1rem;
             border-radius: 15px;
             transition: all 0.3s ease;
+            color: white;
         }
  
         .sidebar a:hover {
