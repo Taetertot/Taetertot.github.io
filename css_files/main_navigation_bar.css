@@ -24,8 +24,10 @@ nav {
           padding: 0.5rem 1rem;
           border-radius: 15px;
           transition: all 0.3s ease;
+          color: white;
       }
 
       .nav-links a:hover {
           background: linear-gradient(135deg, #667eea 0%, #48bb78 100%);
+          color: white;    
           }
