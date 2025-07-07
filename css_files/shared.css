@@ -103,13 +103,11 @@ main {
 .publication-title {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #333;
     margin-bottom: 0.5rem;
     line-height: 1.4;
 }
 .publication-authors {
-    color: #666;
-    margin-bottom: 0.5rem;
+   margin-bottom: 0.5rem;
     font-size: 1rem;
 }
 .publication-venue {
@@ -121,12 +119,10 @@ main {
     margin-bottom: 0.5rem;
 }
 .publication-year {
-    color: #888;
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
 .publication-abstract {
-    color: #555;
     line-height: 1.6;
     margin-bottom: 1rem;
     font-size: 0.95rem;
