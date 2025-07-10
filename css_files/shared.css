@@ -207,3 +207,19 @@ main {
                 font-size: 2rem;
             }
         }
+#S_Btn {
+padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
+  cursor: pointer;
+  display: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+#S_Btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(118, 75, 162, 0.6);
