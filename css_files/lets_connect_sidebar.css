@@ -37,7 +37,21 @@
         }
  .layout {
       display: grid;
-      grid-template-columns: 200px 1fr;
+      grid-template-columns: 300px 1fr;
       gap: 1rem;
       padding: 2rem;
-    }   
+    } 
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: relative;
+        top: unset;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+}
