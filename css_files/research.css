@@ -1,1 +1,13 @@
-/* No styles needed here yet */
+.publication-title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.publication-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}/* No styles needed here yet */
