@@ -1,12 +1,20 @@
-/* My photo*/
-.name-img {
+}
+.intro-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.profile-img {
+  border-radius: 50%;
+  object-fit: cover;
   width: 240px;
   height: 240px;
   border-radius: 30%; /* makes it round */
   object-fit: cover;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
   position: absolute;
- top: 8px;
- right: 16px;
- 
+  top: 8px;
+  right: 16px;
 }
