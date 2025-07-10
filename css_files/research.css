@@ -7,7 +7,7 @@
 }
 
 .publication-icon {
-  width: 24px;
-  height: 24px;
+  height: 50px;
   object-fit: contain;
+  border-radius: 50%;
 }/* No styles needed here yet */
