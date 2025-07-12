@@ -142,13 +142,13 @@ main {
     font-size: 0.85rem;
     transition: all 0.3s ease;
 }
-        .publication-link a:hover {
+        .publication-link:hover {
             background: linear-gradient(135deg, #5a67d8 0%, #38a169 100%);
             transform: translateY(-2px);
             color: white;    
         }
 
-.publication-link.secondary {
+/*.publication-link.secondary {
     background-color: #e2e8f0;
     color: #667eea;
 }
@@ -156,6 +156,7 @@ main {
             background-color: #cbd5e0;
             color: white;    
         }
+*/
  .layout {
       display: grid;
       grid-template-columns: 200px 1fr;
