@@ -1,7 +1,7 @@
 .intro-header {
   display: flex;
   align-items: center;
-  gap: 30rem;
+  gap: 20rem;
   margin-bottom: 1rem;
 }
 .profile-img {
