@@ -142,7 +142,7 @@ main {
     font-size: 0.85rem;
     transition: all 0.3s ease;
 }
-        .publication-link:hover {
+        .publication-link a:hover {
             background: linear-gradient(135deg, #5a67d8 0%, #38a169 100%);
             transform: translateY(-2px);
             color: white;    
