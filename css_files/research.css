@@ -1,7 +1,7 @@
 .publication-title-with-icon {
   display: flex;
   align-items: center;
-  gap: 10px; /* space between icon and text */
+  gap: 10px;
   font-weight: bold;
   font-size: 1.1em;
 }
