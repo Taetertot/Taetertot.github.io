@@ -10,5 +10,6 @@
   width: 110px;
   height: 210px;
   object-fit: contain;
-  border-radius: 40%;
-}/* No styles needed here yet */
+  border-radius: 60%;
+  float: left;
+}
