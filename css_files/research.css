@@ -30,6 +30,7 @@
   transform: rotate(180deg); /* This flips ▼ to ▲ visually */
 }
 .publication-content {
+  background: #171717;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
