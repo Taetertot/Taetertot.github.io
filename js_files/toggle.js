@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   headers.forEach(header => {
     header.addEventListener("click", () => {
-      const content = header.nextElementSibling;
+     const content = header.parentElement.querySelector(".publication-content");
       const icon = header.querySelector(".toggle-icon");
       const isExpanded = content.classList.contains("expanded");
 
