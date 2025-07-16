@@ -13,3 +13,13 @@
   border-radius: 60%;
   float: left;
 }
+.toggle-icon {
+  font-size: 1.2em;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.rotate-up {
+  transform: rotate(180deg); /* This flips ▼ to ▲ visually */
+}
