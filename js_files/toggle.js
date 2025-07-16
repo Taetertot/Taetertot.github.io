@@ -1,20 +1,20 @@
- document.addEventListener("DOMContentLoaded", () => {
-    const headers = document.querySelectorAll(".collapsible-header");
+document.addEventListener("DOMContentLoaded", () => {
+  const headers = document.querySelectorAll(".collapsible-header");
 
-    headers.forEach(header => {
-      header.addEventListener("click", () => {
-        const content = header.nextElementSibling;
-        const icon = header.querySelector(".toggle-icon");
+  headers.forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      const icon = header.querySelector(".toggle-icon");
 
-        const isVisible = content.style.display === "block";
+      const isExpanded = content.classList.contains("expanded");
 
-        // Toggle content
-        content.style.display = isVisible ? "none" : "block";
+      // Toggle class for animation
+      content.classList.toggle("expanded", !isExpanded);
 
-        // Toggle icon direction
-        if (icon) {
-          icon.classList.toggle("rotate-up", !isVisible);
-        }
-      });
+      // Toggle icon direction
+      if (icon) {
+        icon.classList.toggle("rotate-up", !isExpanded);
+      }
     });
   });
+});
