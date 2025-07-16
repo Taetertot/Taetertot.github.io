@@ -71,7 +71,7 @@
 }
 
 /* === Individual Publication Cards === */
-.publication {
+.publication-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -94,7 +94,7 @@
     gap: 16px;
   }
 
-  .publication {
+  .publication-card {
     padding: 12px;
     border-radius: 10px;
   }
