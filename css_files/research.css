@@ -1,9 +1,17 @@
+/* === Publication Card Titles and Icons === */
 .publication-title-with-icon {
   display: flex;
   align-items: center;
   gap: 10px;
+  /* font styling moved to .publication-title-text for clarity */
+}
+
+.publication-title-text {
   font-weight: bold;
   font-size: 1.1em;
+  flex-grow: 1;
+  line-height: 1.2;
+  color: #222;
 }
 
 .publication-icon {
@@ -13,31 +21,51 @@
   border-radius: 50%;
 }
 
+/* Container for title and toggle aligned with space-between */
 .title-icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 
+/* Toggle icon style and rotation on expand */
 .toggle-icon {
   font-size: 1.2em;
   margin-left: 10px;
   transition: transform 0.3s ease;
   display: inline-block;
+  cursor: pointer;
+  user-select: none;
 }
 
 .rotate-up {
-  transform: rotate(180deg); /* This flips ▼ to ▲ visually */
+  transform: rotate(180deg);
 }
+
+/* === Publication Content Accordion === */
 .publication-content {
   background: #171717;
+  color: #eee;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.4s ease, padding 0.4s ease;
   padding-left: 15px;
   margin-left: 10px;
   border-left: 3px solid #ccc;
+  /* padding-top/bottom will be added on expand for smoothness */
+  padding-top: 0;
+  padding-bottom: 0;
 }
+
+.publication-content.expanded {
+  max-height: 1000px; /* large enough to reveal content */
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* === Grid Layout for Publications === */
 .publications-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -46,6 +74,7 @@
   align-items: stretch;
 }
 
+/* === Individual Publication Cards === */
 .publication {
   display: flex;
   flex-direction: column;
@@ -56,18 +85,15 @@
   padding: 15px;
   transition: box-shadow 0.3s ease;
 }
+
 .publication:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.publication-content.expanded {
-  max-height: 1000px; /* large enough to reveal all content */
-  margin-top: 5px;
-}
 
-
+/* === Responsive: Mobile Styles === */
 @media (max-width: 768px) {
   .publications-grid {
-    grid-template-columns: 1fr; /* Stack cards vertically */
+    grid-template-columns: 1fr; /* stack cards vertically */
     padding: 10px;
     gap: 16px;
   }
@@ -88,12 +114,13 @@
   }
 
   .publication-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 
   .toggle-icon {
     font-size: 1rem;
+    margin-left: 5px;
   }
 
   .publication-content {
@@ -101,8 +128,10 @@
     margin-left: 6px;
     border-left: 2px solid #ccc;
   }
+}
 
-(hover: hover) {
+/* === Hover Support Detection: only apply box shadow on hover-capable devices */
+@media (hover: hover) {
   .publication:hover {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
