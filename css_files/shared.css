@@ -135,9 +135,7 @@ main {
 .publication-link {
     display: inline-block;
     padding: 0.4rem 1rem;
-    background: linear-gradient(135deg, #667eea 0%, #48bb78 100%);
     color: white;
-    text-decoration: none;
     border-radius: 15px;
     font-size: 0.85rem;
     transition: all 0.3s ease;
