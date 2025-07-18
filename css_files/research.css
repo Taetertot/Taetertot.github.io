@@ -61,14 +61,14 @@
   padding-bottom: 10px;
 }
 
-/* === Grid Layout for Publications === */
+/* === Grid Layout for Publications === 
 .publications-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
   align-items: stretch;
-}
+} */
 
 /* === Individual Publication Cards === */
 .publication-card {
