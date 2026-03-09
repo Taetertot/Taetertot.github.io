@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const headers = document.querySelectorAll(".collapsible-header");
-
   headers.forEach(header => {
     header.addEventListener("click", () => {
-      const publication = header.closest(".publication");
+      const publication = header.closest(".publication-card");
       const content = publication.querySelector(".publication-content");
       const icon = header.querySelector(".toggle-icon");
       const isExpanded = content.classList.contains("expanded");
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (openContent !== content) {
           openContent.classList.remove("expanded");
           openContent.style.maxHeight = null;
-          const openIcon = openContent.closest(".publication").querySelector(".toggle-icon");
+          const openIcon = openContent.closest(".publication-card").querySelector(".toggle-icon");
           if (openIcon) openIcon.classList.remove("rotate-up");
         }
       });
