@@ -14,18 +14,19 @@
 	    <title>Research/Projects</title>
 
    	<style>
-    @media (max-width: 768px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-    
-      .sidebar {
-        position: relative;
-        top: unset;
-        border-right: none;
-        border-bottom: 1px solid #ccc;
-      }
-        </style>
+  @media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: relative;
+    top: unset;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+  }
+}
+</style>
      </head>
 <body>
   <header>
@@ -35,17 +36,20 @@
             </div>
         </div>
     </header>
-  <nav>
-        <div>
-            <div class="nav-container">
-                <ul class="nav-links">
-                    <li><a href="https://taetertot.github.io/index.html">Main</a></li>
-                    <li><a href="https://taetertot.github.io/research.html">Research/Projects</a></li>
-                    <li><a href="https://taetertot.github.io/miscellaneous.html">Miscellaneous</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+ <nav>
+  <div class="nav-container">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="https://taetertot.github.io/index.html">Main</a></li>
+      <li><a href="https://taetertot.github.io/research.html">Research/Projects</a></li>
+      <li><a href="https://taetertot.github.io/miscellaneous.html">Miscellaneous</a></li>
+    </ul>
+  </div>
+</nav>
  <div class="layout">
     <aside class="sidebar">
      <div> <h2>Let's Connect</h2>
