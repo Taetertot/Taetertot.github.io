@@ -4,7 +4,7 @@ header {
         padding: 2rem 0;
         text-align: center;
     }
-.header-content h1 {
+        .header-content h1 {
             font-size: 3rem;
             margin-bottom: 0.5rem;
             font-weight: 300;
@@ -21,3 +21,34 @@ header {
             font-style: italic;
             opacity: 0.8;
         }
+@media (max-width: 768px) {
+         header {
+            padding: 1.5rem 1rem; /* adds side padding so text doesn't touch edges */
+        }
+
+  .header-content h1 {
+    font-size: 2rem;      /* 3rem is too large on small screens */
+  }
+
+  .header-content .subtitle {
+    font-size: 1.05rem;
+  }
+
+  .header-content .tagline {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content h1 {
+    font-size: 1.6rem;    /* extra reduction for very small phones */
+  }
+
+  .header-content .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .header-content .tagline {
+    font-size: 0.85rem;
+  }
+}
