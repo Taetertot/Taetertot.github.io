@@ -3,19 +3,20 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  /* font styling moved to .publication-title-text for clarity */
 }
 
 .publication-title-text {
   font-weight: bold;
   font-size: 1.1em;
   flex-grow: 1;
-  line-height: 1.2;
+  line-height: 1.3;
+  word-break: break-word; /* prevent long titles overflowing */
 }
 
 .publication-icon {
   width: 40px;
   height: 40px;
+  min-width: 40px; /* prevent icon from shrinking in flex */
   object-fit: cover;
   border-radius: 50%;
 }
@@ -31,11 +32,14 @@
 /* Toggle icon style and rotation on expand */
 .toggle-icon {
   font-size: 1.2em;
+  min-width: 24px; /* prevent collapse on small screens */
   margin-left: 10px;
   transition: transform 0.3s ease;
   display: inline-block;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent; /* remove tap flash on iOS */
+  touch-action: manipulation; /* faster tap response */
 }
 
 .rotate-up {
@@ -49,13 +53,12 @@
   transition: max-height 0.4s ease, padding 0.4s ease;
   padding-left: 15px;
   margin-left: 10px;
-   /* padding-top/bottom will be added on expand for smoothness */
   padding-top: 0;
   padding-bottom: 0;
 }
 
 .publication-content.expanded {
-  max-height: 1000px; /* large enough to reveal content */
+  max-height: 1000px;
   margin-top: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -64,12 +67,12 @@
 /* === Grid Layout for Publications === */
 .publications-grid {
   display: grid;
-  grid-template-columns:1fr;
+  grid-template-columns: 1fr;
   max-width: 900px;
   gap: 20px;
   padding: 20px;
-  margin: 0 auto; 
-} 
+  margin: 0 auto;
+}
 
 /* === Individual Publication Cards === */
 .publication-card {
@@ -81,17 +84,20 @@
   border-radius: 12px;
   padding: 15px;
   transition: box-shadow 0.3s ease;
+  box-sizing: border-box; /* ensure padding doesn't cause overflow */
 }
 
-.publication:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* === Hover Support Detection === */
+@media (hover: hover) {
+  .publication-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
 }
 
-/* === Responsive: Mobile Styles === */
+/* === Responsive: Tablet (768px) === */
 @media (max-width: 768px) {
   .publications-grid {
-    grid-template-columns: 1fr; /* stack cards vertically */
-    padding: 10px;
+    padding: 12px;
     gap: 16px;
   }
 
@@ -100,41 +106,66 @@
     border-radius: 10px;
   }
 
-  .title-icon-wrapper {
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
   .publication-title-text {
     font-size: 1rem;
-    line-height: 1.3;
+    line-height: 1.4;
   }
 
   .publication-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
   }
 
   .toggle-icon {
     font-size: 1rem;
-    margin-left: 5px;
+    margin-left: 6px;
   }
 
   .publication-content {
     padding-left: 10px;
     margin-left: 6px;
-    border-left: 2px solid #ccc;
   }
 }
 
-/* === Hover Support Detection: only apply box shadow on hover-capable devices */
-@media (hover: hover) {
-  .publication:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-}
-@media (max-width: 768px) {
+/* === Responsive: Small Mobile (480px) === */
+@media (max-width: 480px) {
   .publications-grid {
-    padding: 0 12px;
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .publication-card {
+    padding: 10px;
+    border-radius: 8px;
+    border-left-width: 3px;
+  }
+
+  .publication-title-text {
+    font-size: 0.95rem;
+  }
+
+  .publication-icon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+  }
+
+  .publication-title-with-icon {
+    gap: 8px;
+  }
+
+  .title-icon-wrapper {
+    gap: 6px;
+  }
+
+  .toggle-icon {
+    font-size: 0.95rem;
+    min-width: 20px;
+  }
+
+  .publication-content.expanded {
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 }
