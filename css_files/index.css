@@ -10,16 +10,19 @@
   height: 200px;
   object-fit: cover;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  flex-shrink:0;
 }
 
 @media (max-width: 768px) {
   .intro-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* center content on mobile */
+    gap: 1.5rem;        /* 10rem gap was way too large on small screens */
+    text-align: center;
   }
 
   .profile-img {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
 }
