@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const headers = document.querySelectorAll(".collapsible-header");
+  const toggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  }); // ← this was missing
+
   headers.forEach(header => {
     header.addEventListener("click", () => {
       const publication = header.closest(".publication-card");
@@ -27,5 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
         if (icon) icon.classList.remove("rotate-up");
       }
     });
-  });
+  }); // ← this was also missing
 });
