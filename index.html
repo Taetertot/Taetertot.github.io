@@ -40,17 +40,20 @@
         	<br>您好! 안녕하세요! Guten tag! नमस्ते!</h1>
         </div>
     </header>
-     <nav>
-        <div>
-            <div class="nav-container">
-                <ul class="nav-links">
-                    <li><a href="https://taetertot.github.io/index.html">Main</a></li>
-                    <li><a href="https://taetertot.github.io/research.html">Research/Projects</a></li>
-                    <li><a href="https://taetertot.github.io/miscellaneous.html">Miscellaneous</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+   <nav>
+  <div class="nav-container">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="https://taetertot.github.io/index.html">Main</a></li>
+      <li><a href="https://taetertot.github.io/research.html">Research/Projects</a></li>
+      <li><a href="https://taetertot.github.io/miscellaneous.html">Miscellaneous</a></li>
+    </ul>
+  </div>
+</nav>
  <div class="layout">
     <aside class="sidebar">
       <h2>Let's Connect</h2>
@@ -235,6 +238,15 @@
 });
 </script>
  </div>
+<script>
+  const toggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+</script>
 </body>
                     
 </html>
